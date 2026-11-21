@@ -1,0 +1,4 @@
+Extract the fashion events from this text.
+
+TEXT:
+{text}

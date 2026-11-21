@@ -1,0 +1,23 @@
+{
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query_file": "queries/12_italian_labels_editions.rq",
+ "query_sha256_12": "3f0b4336faeb",
+ "query": "# Follow-up (Italian labels / alternative terminology): items named Milano Moda Donna / Settimana della moda di Milano / Milano Fashion Week.\nSELECT DISTINCT ?item ?itemLabel ?itemDescription ?class ?classLabel WHERE {\n  SERVICE wikibase:mwapi {\n    bd:serviceParam wikibase:api \"EntitySearch\" ; wikibase:endpoint \"www.wikidata.org\" ;\n      mwapi:search \"Milano Moda Donna\" ; mwapi:language \"it\" .\n    ?item wikibase:apiOutputItem mwapi:item .\n  }\n  OPTIONAL { ?item wdt:P31 ?class }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"it,en\". }\n}\nORDER BY ?itemLabel\nLIMIT 20\n",
+ "timestamp_utc": "2026-11-19T11:55:07.119110+00:00",
+ "http_status": 200,
+ "response": {
+  "head": {
+   "vars": [
+    "item",
+    "itemLabel",
+    "itemDescription",
+    "class",
+    "classLabel"
+   ]
+  },
+  "results": {
+   "bindings": []
+  }
+ },
+ "row_count": 0
+}

@@ -1,0 +1,12 @@
+{
+ "dataset": "fashiongraph-pilot-gold",
+ "version": "0.1.0",
+ "records": 10,
+ "sha256": "edf61b8f19bee26332838c9d8b7e7b905436e801c26eed902721367488949200",
+ "frozen_on": "2026-11-19",
+ "source_id": "cnmi-calendar-ss27",
+ "source_html_sha256": "5713ab769f35bda089de3878da596a065ac13fd836c13a46ed529cede899180b",
+ "review_status": "machine second-pass cross-check passed (data/review/second_pass.json); HUMAN ADJUDICATION PENDING - not independently human-verified",
+ "split_policy": "splits unassigned in v0.1; assign in docs/experiment-protocol.md before any run",
+ "change_rule": "any content change requires a new version + new checksum"
+}

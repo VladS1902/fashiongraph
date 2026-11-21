@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FashionGraph source record (provenance)",
+  "type": "object",
+  "required": ["source_id", "url", "retrieved_on", "publisher", "licence", "scope", "verification_status"],
+  "properties": {
+    "source_id": {"type": "string"},
+    "url": {"type": "string", "format": "uri"},
+    "retrieved_on": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "publisher": {"type": "string"},
+    "licence": {"type": "string"},
+    "scope": {"type": "string"},
+    "evidence_snippet": {"type": "string"},
+    "verification_status": {"enum": ["unverified", "verified", "disputed"]},
+    "split": {"enum": ["train", "dev", "test", null]}
+  }
+}

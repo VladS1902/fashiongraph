@@ -1,0 +1,638 @@
+{
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query_file": "queries/01_inspect_q130829.rq",
+ "query_sha256_12": "39436adc7456",
+ "query": "# Inspect starting point Q130829: label, description, instance of, all direct statements\nSELECT DISTINCT ?label ?desc ?prop ?propLabel ?val ?valLabel WHERE {\n  VALUES ?s { wd:Q130829 }\n  OPTIONAL { ?s rdfs:label ?label FILTER(LANG(?label)=\"en\") }\n  OPTIONAL { ?s schema:description ?desc FILTER(LANG(?desc)=\"en\") }\n  OPTIONAL { ?s ?p ?val . ?prop wikibase:directClaim ?p .\n    OPTIONAL { ?prop rdfs:label ?propLabel FILTER(LANG(?propLabel)=\"en\") } }\n  OPTIONAL { ?val rdfs:label ?valLabel FILTER(LANG(?valLabel)=\"en\") }\n}\nORDER BY ?propLabel\nLIMIT 60\n",
+ "timestamp_utc": "2026-11-19T11:43:03.774508+00:00",
+ "http_status": 200,
+ "response": {
+  "head": {
+   "vars": [
+    "label",
+    "desc",
+    "prop",
+    "propLabel",
+    "val",
+    "valLabel"
+   ]
+  },
+  "results": {
+   "bindings": [
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P373"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Commons category"
+     },
+     "val": {
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P10234"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Der Spiegel topic ID"
+     },
+     "val": {
+      "type": "literal",
+      "value": "mailand_fashion_week"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P14541"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Encyclopedia of China (Third Edition) ID (2026)"
+     },
+     "val": {
+      "type": "literal",
+      "value": "1E88JH"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P14541"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Encyclopedia of China (Third Edition) ID (2026)"
+     },
+     "val": {
+      "type": "literal",
+      "value": "4alnkN"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P10565"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Encyclopedia of China (Third Edition) old ID (2021)"
+     },
+     "val": {
+      "type": "literal",
+      "value": "141161"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P10565"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Encyclopedia of China (Third Edition) old ID (2021)"
+     },
+     "val": {
+      "type": "literal",
+      "value": "183237"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P646"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Freebase ID"
+     },
+     "val": {
+      "type": "literal",
+      "value": "/m/0cc824h"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P3417"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Quora topic ID"
+     },
+     "val": {
+      "type": "literal",
+      "value": "Milan-Fashion-Week"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P13974"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Teen Vogue tag ID"
+     },
+     "val": {
+      "type": "literal",
+      "value": "milan-fashion-week"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P3106"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "The Guardian topic ID"
+     },
+     "val": {
+      "type": "literal",
+      "value": "fashion/milan-fashion-week"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P17"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "country"
+     },
+     "val": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q38"
+     },
+     "valLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italy"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P18"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "image"
+     },
+     "val": {
+      "type": "uri",
+      "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Milan%20Fashion%20Week%202.jpg"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P571"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "inception"
+     },
+     "val": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1958-01-01T00:00:00Z"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P31"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "instance of"
+     },
+     "val": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q253946"
+     },
+     "valLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "fashion week"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P276"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "location"
+     },
+     "val": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q490"
+     },
+     "valLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P1705"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "native label"
+     },
+     "val": {
+      "xml:lang": "it",
+      "type": "literal",
+      "value": "Settimana della moda di Milano"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P856"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "official website"
+     },
+     "val": {
+      "type": "uri",
+      "value": "https://www.cameramoda.it"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P856"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "official website"
+     },
+     "val": {
+      "type": "uri",
+      "value": "https://www.cameramoda.it/en"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P7153"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "significant place"
+     },
+     "val": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q3747208"
+     },
+     "valLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Fondazione Prada"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P7153"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "significant place"
+     },
+     "val": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q3977792"
+     },
+     "valLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Vigentino"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P7153"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "significant place"
+     },
+     "val": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134411431"
+     },
+     "valLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Fashion District of Milano"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P580"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "start time"
+     },
+     "val": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1958-01-01T00:00:00Z"
+     }
+    },
+    {
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     },
+     "prop": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/P910"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "topic's main category"
+     },
+     "val": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q29352790"
+     },
+     "valLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Category:Milan Fashion Week"
+     }
+    }
+   ]
+  }
+ },
+ "row_count": 23
+}

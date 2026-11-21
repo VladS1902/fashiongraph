@@ -1,0 +1,6 @@
+{
+  "url": "https://vlads1902.github.io/fashiongraph/",
+  "repository": "https://github.com/VladS1902/fashiongraph",
+  "published": "2026-11-21",
+  "note": "The live address goes on the slide title page (PDF p.17). Deployed by .github/workflows/ci.yml on every push to main."
+}

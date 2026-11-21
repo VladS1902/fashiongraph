@@ -1,0 +1,8 @@
+# Bounded check A: P710/P664/P1344 statements on the fashion-week items (class Q253946), ids only.
+SELECT DISTINCT ?subject ?p ?object WHERE {
+  ?subject wdt:P31 wd:Q253946 .
+  VALUES ?p { wdt:P710 wdt:P664 wdt:P1344 }
+  ?subject ?p ?object .
+}
+ORDER BY ?subject
+LIMIT 50

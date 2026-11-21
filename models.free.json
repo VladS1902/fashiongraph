@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "mode": "free",
+  "created": "2026-11-19",
+  "technique_status": "PROVISIONAL (names unconfirmed against course materials)",
+  "note": "Zero-cost configuration: only documented free allowances, no billing. The paid configuration remains in models.json. Nothing is billed in this mode, so the money budget is replaced by a free-quota guard (experiments/ratelimit.py) and a Groq plan-header guard that aborts if a paid plan is detected.",
+  "budget": {
+    "cap_eur": 0.0,
+    "usd_per_eur": 1.0968,
+    "fx_source": "ECB 2026-11-18 (only used for the reference 'would-have-cost' figure)",
+    "fx_safety_factor": 0.95,
+    "chars_per_token": 3.0,
+    "input_margin": 1.25
+  },
+  "models": [
+    {
+      "provider": "gemini",
+      "family": "google-gemini",
+      "model_id": "gemini-3.5-flash-lite",
+      "served_model": "gemini-3.5-flash-lite",
+      "max_output_tokens": 1024,
+      "limits": {
+        "rpm": 15,
+        "pace_rpm": 9,
+        "rpd": 500,
+        "tpm": 250000,
+        "tpd": 1000000,
+        "verified": true,
+        "source": "Owner-confirmed from the Google AI Studio rate-limit dashboard for this project, 2026-11-19: 15 requests/min, 250,000 input tokens/min, 500 requests/day (dashboard peak usage then 5/15 RPM, 3.48K/250K TPM, 38/500 RPD). Google publishes no such table in its docs. No per-day token limit is shown, so tpd 1,000,000 is a conservative assumption (the whole run reserves about 55,000). Calls are deliberately paced at 9 requests/min (pace_rpm), below the 15 RPM ceiling.",
+        "retrieved": "2026-11-19"
+      },
+      "price": {
+        "usd_in_per_m": 0.3,
+        "usd_out_per_m": 2.5,
+        "order_verified": true,
+        "source": "https://aistudio.google.com/docs/pricing (paid Standard tier, reference only; the Free tier column reads 'Free of charge')",
+        "retrieved": "2026-11-19"
+      },
+      "notes": "Free tier only if the API key belongs to a Google Cloud project WITHOUT a linked billing account (a billing-linked project is a paid tier). Free-tier prompts and responses may be read by human reviewers and used to improve Google products: only the public, non-personal CNMI schedule text is sent. temperature is not sent (deprecated for Gemini 3.x); thinkingLevel MINIMAL; generateContent endpoint."
+    },
+    {
+      "provider": "groq",
+      "family": "openai-gpt-oss",
+      "model_id": "openai/gpt-oss-120b",
+      "served_model": "openai/gpt-oss-120b",
+      "max_output_tokens": 1500,
+      "params": {
+        "reasoning_effort": "low",
+        "include_reasoning": false
+      },
+      "plan_guard": {
+        "max_tpm_header": 8000,
+        "max_rpd_header": 1000
+      },
+      "limits": {
+        "rpm": 30,
+        "rpd": 1000,
+        "tpm": 8000,
+        "tpd": 200000,
+        "verified": true,
+        "source": "https://console.groq.com/docs/rate-limits (Free Plan Limits table, freeRows in the page data)",
+        "retrieved": "2026-11-19"
+      },
+      "price": {
+        "usd_in_per_m": 0.15,
+        "usd_out_per_m": 0.6,
+        "order_verified": true,
+        "source": "https://console.groq.com/docs/model/openai/gpt-oss-120b (reference only)",
+        "retrieved": "2026-11-19"
+      },
+      "notes": "Production model, 131,072 context, 65,536 max output. Reasoning model: effort low is its minimum (none is not available), reasoning excluded from the response; reasoning tokens still consume the output cap. Strict json_schema supported."
+    },
+    {
+      "provider": "groq",
+      "family": "alibaba-qwen",
+      "model_id": "qwen/qwen3.8-27b",
+      "served_model": "qwen/qwen3.8-27b",
+      "max_output_tokens": 400,
+      "params": {
+        "reasoning_effort": "none"
+      },
+      "plan_guard": {
+        "max_tpm_header": 8000,
+        "max_rpd_header": 1000
+      },
+      "limits": {
+        "rpm": 30,
+        "rpd": 1000,
+        "tpm": 8000,
+        "tpd": 200000,
+        "verified": true,
+        "source": "https://console.groq.com/docs/rate-limits (Free Plan Limits table, freeRows in the page data)",
+        "retrieved": "2026-11-19"
+      },
+      "price": {
+        "usd_in_per_m": 0.8,
+        "usd_out_per_m": 4.0,
+        "order_verified": true,
+        "source": "https://console.groq.com/docs/model/qwen/qwen3.8-27b (reference only)",
+        "retrieved": "2026-11-19"
+      },
+      "notes": "PREVIEW model (Groq: for evaluation only, may be withdrawn without notice). 131,072 context, 16,384 max output. reasoning_effort none = instruct mode, no reasoning tokens. Strict json_schema supported."
+    }
+  ],
+  "retry": {
+    "max_attempts": 4,
+    "base_delay_s": 10.0,
+    "max_delay_s": 60.0,
+    "note": "Longer back-off than the default (1 s): Gemini returned HTTP 503 (overloaded) in the first full-run attempt, and every attempt counts against the free quota."
+  }
+}

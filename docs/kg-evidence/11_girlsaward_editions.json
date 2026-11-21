@@ -1,0 +1,146 @@
+{
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query_file": "queries/11_girlsaward_editions.rq",
+ "query_sha256_12": "d6d78e8e872b",
+ "query": "# Modelling precedent check: do GirlsAward editions exist as separate items with venue and date?\nSELECT DISTINCT ?item ?itemLabel ?start ?venueLabel WHERE {\n  SERVICE wikibase:mwapi {\n    bd:serviceParam wikibase:api \"EntitySearch\" ; wikibase:endpoint \"www.wikidata.org\" ;\n      mwapi:search \"GirlsAward\" ; mwapi:language \"en\" .\n    ?item wikibase:apiOutputItem mwapi:item .\n  }\n  ?item rdfs:label ?l . FILTER(REGEX(?l, \"GirlsAward\", \"i\"))\n  OPTIONAL { ?item wdt:P580 ?start }\n  OPTIONAL { ?item wdt:P276 ?venue }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n}\nORDER BY ?itemLabel\nLIMIT 15\n",
+ "timestamp_utc": "2026-11-19T11:51:12.031587+00:00",
+ "http_status": 200,
+ "response": {
+  "head": {
+   "vars": [
+    "item",
+    "itemLabel",
+    "start",
+    "venueLabel"
+   ]
+  },
+  "results": {
+   "bindings": [
+    {
+     "item": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q11221622"
+     },
+     "itemLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "GirlsAward"
+     },
+     "start": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "2010-01-01T00:00:00Z"
+     }
+    },
+    {
+     "item": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28135680"
+     },
+     "itemLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "GirlsAward 2014 Autumn/Winter"
+     }
+    },
+    {
+     "item": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28135678"
+     },
+     "itemLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "GirlsAward 2015 Spring/Summer"
+     },
+     "start": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "2010-01-01T00:00:00Z"
+     }
+    },
+    {
+     "item": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q129494634"
+     },
+     "itemLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "GirlsAward 2024 SPRING/SUMMER"
+     },
+     "venueLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Yoyogi National Gymnasium"
+     }
+    },
+    {
+     "item": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q136592755"
+     },
+     "itemLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "GirlsAward 2025 AUTUMN/WINTER"
+     },
+     "venueLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "International Exhibition Hall 9-11"
+     }
+    },
+    {
+     "item": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q142073480"
+     },
+     "itemLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "GirlsAward 2026 AUTUMN/WINTER"
+     },
+     "venueLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Makuhari Messe"
+     }
+    },
+    {
+     "item": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q136592757"
+     },
+     "itemLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "GirlsAward 2026 SPRING/SUMMER"
+     },
+     "venueLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Yoyogi National Gymnasium"
+     }
+    },
+    {
+     "item": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q142073505"
+     },
+     "itemLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "GirlsAward 2027 SPRING/SUMMER"
+     },
+     "venueLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Yoyogi National Gymnasium"
+     }
+    }
+   ]
+  }
+ },
+ "row_count": 8
+}

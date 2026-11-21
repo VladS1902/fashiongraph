@@ -1,0 +1,23 @@
+{
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query_file": "queries/06_fashion_show_events.rq",
+ "query_sha256_12": "a50dedfcadd0",
+ "query": "# Look for Milan fashion-show style events (editions/shows) by label REGEX on items located in Milan or labelled with Milan.\nSELECT DISTINCT ?item ?label ?desc ?start ?venue WHERE {\n  SERVICE wikibase:mwapi {\n    bd:serviceParam wikibase:api \"EntitySearch\" ; wikibase:endpoint \"www.wikidata.org\" ;\n      mwapi:search \"fashion show Milan\" ; mwapi:language \"en\" .\n    ?item wikibase:apiOutputItem mwapi:item .\n  }\n  ?item rdfs:label ?label .\n  FILTER(LANG(?label)=\"en\" && REGEX(?label, \"fashion (show|week)|collection|Spring|Autumn|Fall|Winter|Summer\", \"i\"))\n  OPTIONAL { ?item schema:description ?desc FILTER(LANG(?desc)=\"en\") }\n  OPTIONAL { ?item wdt:P580 ?start }\n  OPTIONAL { ?item wdt:P276 ?venue }\n}\nORDER BY ?label\nLIMIT 50\n",
+ "timestamp_utc": "2026-11-19T11:46:08.314138+00:00",
+ "http_status": 200,
+ "response": {
+  "head": {
+   "vars": [
+    "item",
+    "label",
+    "desc",
+    "start",
+    "venue"
+   ]
+  },
+  "results": {
+   "bindings": []
+  }
+ },
+ "row_count": 0
+}

@@ -1,0 +1,38 @@
+{
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query_file": "queries/02_mfw_entities_regex.rq",
+ "query_sha256_12": "793f9f0758e9",
+ "query": "# Fashion-week entities: UNION of (a) instances of fashion week (Q253946) and (b) items linked to Q130829\n# by part-of / instance-of / participant-in. REGEX keeps Milan-related labels only.\n# (An unbounded label scan over all items timed out with HTTP 504, so the query is restricted by class/links.)\nSELECT DISTINCT ?item ?label ?desc WHERE {\n  { ?item wdt:P31 wd:Q253946 }\n  UNION { ?item wdt:P361 wd:Q130829 }\n  UNION { ?item wdt:P31 wd:Q130829 }\n  UNION { ?item wdt:P1344 wd:Q130829 }\n  ?item rdfs:label ?label . FILTER(LANG(?label)=\"en\")\n  FILTER(REGEX(?label, \"Milan|Milano|Settimana\", \"i\"))\n  OPTIONAL { ?item schema:description ?desc FILTER(LANG(?desc)=\"en\") }\n}\nORDER BY ?label\nLIMIT 50\n",
+ "timestamp_utc": "2026-11-19T11:45:40.860182+00:00",
+ "http_status": 200,
+ "response": {
+  "head": {
+   "vars": [
+    "item",
+    "label",
+    "desc"
+   ]
+  },
+  "results": {
+   "bindings": [
+    {
+     "item": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q130829"
+     },
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     }
+    }
+   ]
+  }
+ },
+ "row_count": 1
+}

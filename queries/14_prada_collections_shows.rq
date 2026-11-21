@@ -1,0 +1,13 @@
+# Follow-up: are there collection/show items for Prada (e.g. Prada Spring/Summer ...)? Label-bounded, English + Italian.
+SELECT DISTINCT ?item ?itemLabel ?itemDescription ?class WHERE {
+  SERVICE wikibase:mwapi {
+    bd:serviceParam wikibase:api "EntitySearch" ; wikibase:endpoint "www.wikidata.org" ;
+      mwapi:search "Prada collection" ; mwapi:language "en" .
+    ?item wikibase:apiOutputItem mwapi:item .
+  }
+  OPTIONAL { ?item wdt:P31 ?class }
+  ?item rdfs:label ?itemLabel . FILTER(LANG(?itemLabel) IN ("it","en") && REGEX(?itemLabel, "Prada.*(collection|fashion show|Spring|Autumn|Fall|Winter|Summer)|collezione", "i"))
+  OPTIONAL { ?item schema:description ?itemDescription FILTER(LANG(?itemDescription) IN ("it","en")) }
+}
+ORDER BY ?itemLabel
+LIMIT 20

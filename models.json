@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "created": "2026-11-19",
+  "technique_status": "PROVISIONAL (names unconfirmed against course materials)",
+  "budget": {
+    "cap_eur": 5.0,
+    "usd_per_eur": 1.0968,
+    "fx_source": "ECB euro reference rate, 2026-11-18 (https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml)",
+    "fx_safety_factor": 0.95,
+    "chars_per_token": 3.0,
+    "input_margin": 1.25
+  },
+  "models": [
+    {
+      "provider": "openai",
+      "model_id": "gpt-5.4-mini-2026-03-17",
+      "served_model": "gpt-5.4-mini-2026-03-17",
+      "max_output_tokens": 400,
+      "price": {
+        "usd_in_per_m": 0.75,
+        "usd_out_per_m": 4.5,
+        "order_verified": true,
+        "source": "https://developers.openai.com/api/docs/pricing and https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "retrieved": "2026-11-19"
+      },
+      "notes": "Alias gpt-5.4-mini; dated snapshot pinned. Structured Outputs supported; reasoning effort default none; temperature 0 only valid with effort none (adapter sends reasoning_effort none)."
+    },
+    {
+      "provider": "gemini",
+      "model_id": "gemini-3.5-flash-lite",
+      "served_model": "gemini-3.5-flash-lite",
+      "max_output_tokens": 1024,
+      "price": {
+        "usd_in_per_m": 0.3,
+        "usd_out_per_m": 2.5,
+        "order_verified": true,
+        "source": "https://aistudio.google.com/docs/pricing (Gemini 3.5 Flash-Lite, Standard paid tier; output price includes thinking tokens; no context tiers listed)",
+        "retrieved": "2026-11-19"
+      },
+      "notes": "Owner-approved replacement (2026-11-19) for the deprecated gemini-2.5-flash. Stable model code per https://aistudio.google.com/docs/models/gemini-3.5-flash-lite (no dated variants listed; structured outputs and thinking supported; 1,048,576 input / 65,536 output tokens). Adapter uses generateContent (legacy, 'fully supported'; Google recommends the Interactions API for new projects). temperature is NOT sent (deprecated/ignored for Gemini 3.x, HTTP 400 planned) so Gemini output cannot be pinned to deterministic sampling. Thinking: thinkingConfig.thinkingLevel MINIMAL (documented default for Flash-Lite; cannot be fully disabled; thinking tokens billed as output and bounded by maxOutputTokens). Structured output: responseMimeType application/json + responseJsonSchema (listed in the reference; behaviour unverified until the smoke test). Served model read from response modelVersion (field documented; exact string for this model unverified until the smoke test)."
+    },
+    {
+      "provider": "mistral",
+      "model_id": "mistral-small-2603",
+      "served_model": "mistral-small-2603",
+      "max_output_tokens": 400,
+      "price": {
+        "usd_in_per_m": 0.15,
+        "usd_out_per_m": 0.6,
+        "order_verified": false,
+        "source": "https://docs.mistral.ai/models/mistral-small-4-0-26-03",
+        "retrieved": "2026-11-19"
+      },
+      "notes": "Mistral Small 4 (v26.03, Apache 2.0, 256k context, Structured Outputs listed). The page shows $0.15 and $0.60 without labelling input vs output, so budgeting charges BOTH tokens at $0.60 until verified. Served-model string returned by the API is unverified (smoke test)."
+    }
+  ]
+}

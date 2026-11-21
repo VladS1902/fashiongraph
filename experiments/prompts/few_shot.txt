@@ -1,0 +1,6 @@
+Extract the fashion events from this text. Worked examples (training split, disjoint from the evaluated records) follow.
+
+{examples}
+
+TEXT:
+{text}

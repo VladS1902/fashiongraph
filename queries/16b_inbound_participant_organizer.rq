@@ -1,0 +1,7 @@
+# Bounded check B: items pointing to Q130829 with P710/P664/P1344, ids only.
+SELECT DISTINCT ?object ?p WHERE {
+  VALUES ?p { wdt:P710 wdt:P664 wdt:P1344 }
+  ?object ?p wd:Q130829 .
+}
+ORDER BY ?object
+LIMIT 50

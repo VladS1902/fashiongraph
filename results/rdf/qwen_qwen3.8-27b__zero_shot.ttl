@@ -1,0 +1,72 @@
+@prefix ex: <https://example.org/fashiongraph/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/fashiongraph/show/daniela-gregis-2dbde6f5> a schema:Event ;
+    rdfs:label "DANIELA GREGIS" ;
+    ex:eventType "fashion show" ;
+    ex:evidenceQuote "F | 11:30 live | DANIELA GREGIS | Piazza Sant'Ambrogio, 23A" ;
+    ex:extractionRun "qwen/qwen3.8-27b|zero_shot" ;
+    schema:location <https://example.org/fashiongraph/venue/piazza-sant-ambrogio-23a> ;
+    schema:organizer <https://example.org/fashiongraph/brand/daniela-gregis> ;
+    schema:startDate "2026-09-23T11:30:00"^^xsd:dateTime .
+
+<https://example.org/fashiongraph/show/giorgio-armani-51722f84> a schema:Event ;
+    rdfs:label "GIORGIO ARMANI" ;
+    ex:eventType "fashion show" ;
+    ex:evidenceQuote "F | 11:00 live | GIORGIO ARMANI | Via Bergognone, 59" ;
+    ex:extractionRun "qwen/qwen3.8-27b|zero_shot" ;
+    schema:location <https://example.org/fashiongraph/venue/via-bergognone-59> ;
+    schema:organizer <https://example.org/fashiongraph/brand/giorgio-armani> ;
+    schema:startDate "2026-09-27T11:00:00"^^xsd:dateTime .
+
+<https://example.org/fashiongraph/show/nadya-dzyak-0a64ef8e> a schema:Event ;
+    rdfs:label "NADYA DZYAK" ;
+    ex:eventType "fashion show" ;
+    ex:evidenceQuote "F | 10:00 | NADYA DZYAK | DIGITAL" ;
+    ex:extractionRun "qwen/qwen3.8-27b|zero_shot" ;
+    schema:organizer <https://example.org/fashiongraph/brand/nadya-dzyak> ;
+    schema:startDate "2026-09-28T10:00:00"^^xsd:dateTime .
+
+<https://example.org/fashiongraph/show/prada-d9cf8c89> a schema:Event ;
+    rdfs:label "PRADA" ;
+    ex:eventType "fashion show" ;
+    ex:evidenceQuote "F | 14:00 live | PRADA | Via Lorenzini, 14" ;
+    ex:extractionRun "qwen/qwen3.8-27b|zero_shot" ;
+    schema:location <https://example.org/fashiongraph/venue/via-lorenzini-14> ;
+    schema:organizer <https://example.org/fashiongraph/brand/prada> ;
+    schema:startDate "2026-09-22T14:00:00"^^xsd:dateTime .
+
+<https://example.org/fashiongraph/show/vogue-world-milano-4607e8b2> a schema:Event ;
+    rdfs:label "VOGUE WORLD: MILANO" ;
+    ex:eventType "fashion show" ;
+    ex:evidenceQuote "F | 20:00 | VOGUE WORLD: MILANO |" ;
+    ex:extractionRun "qwen/qwen3.8-27b|zero_shot" ;
+    schema:organizer <https://example.org/fashiongraph/brand/vogue-world-milano> ;
+    schema:startDate "2026-09-22T20:00:00"^^xsd:dateTime .
+
+<https://example.org/fashiongraph/brand/daniela-gregis> a schema:Brand ;
+    rdfs:label "DANIELA GREGIS" .
+
+<https://example.org/fashiongraph/brand/giorgio-armani> a schema:Brand ;
+    rdfs:label "GIORGIO ARMANI" .
+
+<https://example.org/fashiongraph/brand/nadya-dzyak> a schema:Brand ;
+    rdfs:label "NADYA DZYAK" .
+
+<https://example.org/fashiongraph/brand/prada> a schema:Brand ;
+    rdfs:label "PRADA" .
+
+<https://example.org/fashiongraph/brand/vogue-world-milano> a schema:Brand ;
+    rdfs:label "VOGUE WORLD: MILANO" .
+
+<https://example.org/fashiongraph/venue/piazza-sant-ambrogio-23a> a schema:Place ;
+    rdfs:label "Piazza Sant'Ambrogio, 23A" .
+
+<https://example.org/fashiongraph/venue/via-bergognone-59> a schema:Place ;
+    rdfs:label "Via Bergognone, 59" .
+
+<https://example.org/fashiongraph/venue/via-lorenzini-14> a schema:Place ;
+    rdfs:label "Via Lorenzini, 14" .
+

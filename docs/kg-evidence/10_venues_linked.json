@@ -1,0 +1,630 @@
+{
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query_file": "queries/10_venues_linked.rq",
+ "query_sha256_12": "abce37faab1e",
+ "query": "# Venues linked to MFW via P793 (inbound) or P7153 (outbound): class, coordinates, address presence.\nSELECT DISTINCT ?v ?vLabel ?classLabel ?coord ?street ?link WHERE {\n  { ?v wdt:P793 wd:Q130829 . BIND(\"P793 significant event (venue->MFW)\" AS ?link) }\n  UNION { wd:Q130829 wdt:P7153 ?v . BIND(\"P7153 significant place (MFW->venue)\" AS ?link) }\n  OPTIONAL { ?v wdt:P31 ?class }\n  OPTIONAL { ?v wdt:P625 ?coord }\n  OPTIONAL { ?v wdt:P6375 ?street }\n  FILTER(!REGEX(STR(?v), \"Q0$\"))\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n}\nORDER BY ?link ?vLabel\nLIMIT 60\n",
+ "timestamp_utc": "2026-11-19T11:46:52.389165+00:00",
+ "http_status": 200,
+ "response": {
+  "head": {
+   "vars": [
+    "v",
+    "vLabel",
+    "classLabel",
+    "coord",
+    "street",
+    "link"
+   ]
+  },
+  "results": {
+   "bindings": [
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134411431"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Fashion District of Milano"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "neighborhood"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.208514626 45.438079107)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P7153 significant place (MFW->venue)"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134411431"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Fashion District of Milano"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "district or neighborhood of Milano"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.208514626 45.438079107)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P7153 significant place (MFW->venue)"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q3747208"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Fondazione Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "art museum"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.204773 45.444042)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P7153 significant place (MFW->venue)"
+     },
+     "street": {
+      "xml:lang": "it",
+      "type": "literal",
+      "value": "Largo Isarco 2"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q3747208"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Fondazione Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "distillery"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.204773 45.444042)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P7153 significant place (MFW->venue)"
+     },
+     "street": {
+      "xml:lang": "it",
+      "type": "literal",
+      "value": "Largo Isarco 2"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q3977792"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Vigentino"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "neighborhood"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.20111 45.4331)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P7153 significant place (MFW->venue)"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q3977792"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Vigentino"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "former municipality"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.20111 45.4331)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P7153 significant place (MFW->venue)"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q131625860"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Anastasia Schipanova"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "human"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P793 significant event (venue->MFW)"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134411431"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Fashion District of Milano"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "neighborhood"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.208514626 45.438079107)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P793 significant event (venue->MFW)"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134411431"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Fashion District of Milano"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "district or neighborhood of Milano"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.208514626 45.438079107)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P793 significant event (venue->MFW)"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134580223"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Palazzo Moncler"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "palace"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.204852183 45.438392534)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P793 significant event (venue->MFW)"
+     },
+     "street": {
+      "xml:lang": "it",
+      "type": "literal",
+      "value": "Via Gargano, 17, Milano"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134580223"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Palazzo Moncler"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "building or structure under construction"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.204852183 45.438392534)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P793 significant event (venue->MFW)"
+     },
+     "street": {
+      "xml:lang": "it",
+      "type": "literal",
+      "value": "Via Gargano, 17, Milano"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134580223"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Palazzo Moncler"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "palace"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.204852183 45.438392534)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P793 significant event (venue->MFW)"
+     },
+     "street": {
+      "xml:lang": "it",
+      "type": "literal",
+      "value": "Viale Ortles, 38, Milano"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134580223"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Palazzo Moncler"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "building or structure under construction"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.204852183 45.438392534)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P793 significant event (venue->MFW)"
+     },
+     "street": {
+      "xml:lang": "it",
+      "type": "literal",
+      "value": "Viale Ortles, 38, Milano"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q107566927"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Piazza Adriano Olivetti"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "square"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.204096724 45.443178151)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P793 significant event (venue->MFW)"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q107566927"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Piazza Adriano Olivetti"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "square"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.20452 45.44324)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P793 significant event (venue->MFW)"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134412777"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ristorante Torre (Prada)"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "restaurant"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.203530597 45.444520747)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P793 significant event (venue->MFW)"
+     },
+     "street": {
+      "xml:lang": "it",
+      "type": "literal",
+      "value": "via Giovanni Lorenzini, 14, Milano"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134412777"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ristorante Torre (Prada)"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "museum"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.203530597 45.444520747)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P793 significant event (venue->MFW)"
+     },
+     "street": {
+      "xml:lang": "it",
+      "type": "literal",
+      "value": "via Giovanni Lorenzini, 14, Milano"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134412777"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ristorante Torre (Prada)"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "pub"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.203530597 45.444520747)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P793 significant event (venue->MFW)"
+     },
+     "street": {
+      "xml:lang": "it",
+      "type": "literal",
+      "value": "via Giovanni Lorenzini, 14, Milano"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134412777"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ristorante Torre (Prada)"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "tower restaurant"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.203530597 45.444520747)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P793 significant event (venue->MFW)"
+     },
+     "street": {
+      "xml:lang": "it",
+      "type": "literal",
+      "value": "via Giovanni Lorenzini, 14, Milano"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q42420453"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Teatro Principe"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "theatre building"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.19382 45.45065)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P793 significant event (venue->MFW)"
+     },
+     "street": {
+      "xml:lang": "it",
+      "type": "literal",
+      "value": "Viale Bligny 52 - Milano"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q42420453"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Teatro Principe"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "art gallery"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.19382 45.45065)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P793 significant event (venue->MFW)"
+     },
+     "street": {
+      "xml:lang": "it",
+      "type": "literal",
+      "value": "Viale Bligny 52 - Milano"
+     }
+    },
+    {
+     "v": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134583663"
+     },
+     "vLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Via Quaranta"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "street"
+     },
+     "coord": {
+      "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "type": "literal",
+      "value": "Point(9.204355623 45.436460951)"
+     },
+     "link": {
+      "type": "literal",
+      "value": "P793 significant event (venue->MFW)"
+     }
+    }
+   ]
+  }
+ },
+ "row_count": 22
+}

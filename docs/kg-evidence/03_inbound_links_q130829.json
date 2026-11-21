@@ -1,0 +1,230 @@
+{
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query_file": "queries/03_inbound_links_q130829.rq",
+ "query_sha256_12": "fc758e946bc8",
+ "query": "# Which entities point TO Q130829 (any direct property)? Tests whether editions/brands/venues are linked.\nSELECT DISTINCT ?s ?sLabel ?propLabel WHERE {\n  ?s ?p wd:Q130829 . FILTER(?s != wd:Q130829)\n  ?prop wikibase:directClaim ?p .\n  OPTIONAL { ?s rdfs:label ?sLabel FILTER(LANG(?sLabel)=\"en\") }\n  OPTIONAL { ?prop rdfs:label ?propLabel FILTER(LANG(?propLabel)=\"en\") }\n}\nORDER BY ?propLabel ?sLabel\nLIMIT 100\n",
+ "timestamp_utc": "2026-11-19T11:45:50.970299+00:00",
+ "http_status": 200,
+ "response": {
+  "head": {
+   "vars": [
+    "s",
+    "sLabel",
+    "propLabel"
+   ]
+  },
+  "results": {
+   "bindings": [
+    {
+     "s": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q29352790"
+     },
+     "sLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Category:Milan Fashion Week"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "category's main topic"
+     }
+    },
+    {
+     "s": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q79993928"
+     },
+     "sLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Dolce and Gabbana Party, Fashion Week, Milan, Italy"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "main subject"
+     }
+    },
+    {
+     "s": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q135188665"
+     },
+     "sLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Alberto Guardabasso"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "participant in"
+     }
+    },
+    {
+     "s": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q138427211"
+     },
+     "sLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Christine Munezero"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "participant in"
+     }
+    },
+    {
+     "s": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q138335797"
+     },
+     "sLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Fikile Sokhulu"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "participant in"
+     }
+    },
+    {
+     "s": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q139062822"
+     },
+     "sLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Samuel Sohebi"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "participant in"
+     }
+    },
+    {
+     "s": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q131625860"
+     },
+     "sLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Anastasia Schipanova"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "significant event"
+     }
+    },
+    {
+     "s": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134411431"
+     },
+     "sLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Fashion District of Milano"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "significant event"
+     }
+    },
+    {
+     "s": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134580223"
+     },
+     "sLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Palazzo Moncler"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "significant event"
+     }
+    },
+    {
+     "s": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q107566927"
+     },
+     "sLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Piazza Adriano Olivetti"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "significant event"
+     }
+    },
+    {
+     "s": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134412777"
+     },
+     "sLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ristorante Torre (Prada)"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "significant event"
+     }
+    },
+    {
+     "s": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q42420453"
+     },
+     "sLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Teatro Principe"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "significant event"
+     }
+    },
+    {
+     "s": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q134583663"
+     },
+     "sLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Via Quaranta"
+     },
+     "propLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "significant event"
+     }
+    }
+   ]
+  }
+ },
+ "row_count": 13
+}

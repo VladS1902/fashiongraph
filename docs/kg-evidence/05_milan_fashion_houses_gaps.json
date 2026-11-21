@@ -1,0 +1,515 @@
+{
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query_file": "queries/05_milan_fashion_houses_gaps.rq",
+ "query_sha256_12": "2449bbdc7bd2",
+ "query": "# Brands found by name (UNION of label VALUES via REGEX) : classes, HQ, participant-in, venue-like links.\n# Tests whether linked brand entities exist and carry event-related statements.\nSELECT DISTINCT ?brand ?brandLabel ?classLabel ?hqLabel ?event ?eventLabel WHERE {\n  SERVICE wikibase:mwapi {\n    bd:serviceParam wikibase:api \"EntitySearch\" ; wikibase:endpoint \"www.wikidata.org\" ;\n      mwapi:search \"Prada\" ; mwapi:language \"en\" .\n    ?brand wikibase:apiOutputItem mwapi:item .\n  }\n  ?brand rdfs:label ?l . FILTER(REGEX(?l, \"^(Prada|Fondazione Prada|Miu Miu)$\", \"i\"))\n  OPTIONAL { ?brand wdt:P31 ?class }\n  OPTIONAL { ?brand wdt:P159 ?hq }\n  OPTIONAL { ?brand wdt:P1344 ?event }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n}\nORDER BY ?brandLabel\nLIMIT 50\n",
+ "timestamp_utc": "2026-11-19T11:46:19.002256+00:00",
+ "http_status": 200,
+ "response": {
+  "head": {
+   "vars": [
+    "brand",
+    "brandLabel",
+    "classLabel",
+    "hqLabel",
+    "event",
+    "eventLabel"
+   ]
+  },
+  "results": {
+   "bindings": [
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q193136"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "fashion house"
+     },
+     "hqLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q193136"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "perfume brand"
+     },
+     "hqLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q193136"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "public company"
+     },
+     "hqLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q18438597"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "human settlement"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q18441528"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "human settlement"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q18446186"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "human settlement"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q18469000"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "human settlement"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q18476329"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "human settlement"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q18482151"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "frazione"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q18489734"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "cascina a corte"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q18494620"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "frazione"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q18505410"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "frazione"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q21507923"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "family name"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q113515074"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "settlement in Galicia"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q113650015"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "casería"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q113671550"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "hamlet"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q115931349"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "settlement in Galicia"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q121114744"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "musical work/composition"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1759818"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "taxon"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q7237379"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "village"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q7237379"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "neighborhood"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q108093584"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "protected area"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q108205792"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "protected area"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q111317089"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "human settlement"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q125097123"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "trademark"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q125097123"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "fashion label"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q126163839"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "lugar"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q3398403"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prada, A Veiga"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "civil parish of Galicia"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q212450"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Prades"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "commune of France"
+     }
+    },
+    {
+     "brand": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1006733"
+     },
+     "brandLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "grassland"
+     }
+    }
+   ]
+  }
+ },
+ "row_count": 30
+}

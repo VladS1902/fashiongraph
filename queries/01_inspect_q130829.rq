@@ -1,0 +1,11 @@
+# Inspect starting point Q130829: label, description, instance of, all direct statements
+SELECT DISTINCT ?label ?desc ?prop ?propLabel ?val ?valLabel WHERE {
+  VALUES ?s { wd:Q130829 }
+  OPTIONAL { ?s rdfs:label ?label FILTER(LANG(?label)="en") }
+  OPTIONAL { ?s schema:description ?desc FILTER(LANG(?desc)="en") }
+  OPTIONAL { ?s ?p ?val . ?prop wikibase:directClaim ?p .
+    OPTIONAL { ?prop rdfs:label ?propLabel FILTER(LANG(?propLabel)="en") } }
+  OPTIONAL { ?val rdfs:label ?valLabel FILTER(LANG(?valLabel)="en") }
+}
+ORDER BY ?propLabel
+LIMIT 60

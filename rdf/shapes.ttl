@@ -1,0 +1,27 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <https://example.org/fashiongraph/> .
+
+ex:EventShape a sh:NodeShape ;
+  sh:targetClass schema:Event ;
+  sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path schema:startDate ; sh:maxCount 1 ;
+                sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:dateTime ] ) ] ;
+  sh:property [ sh:path schema:location ; sh:class schema:Place ] ;
+  sh:property [ sh:path schema:organizer ; sh:or ( [ sh:class schema:Brand ] [ sh:class schema:Organization ] ) ] ;
+  sh:property [ sh:path ex:evidenceQuote ; sh:minCount 1 ] .
+
+ex:FashionShowShape a sh:NodeShape ;
+  sh:targetClass ex:FashionShow ;
+  sh:property [ sh:path schema:superEvent ; sh:minCount 1 ; sh:maxCount 1 ; sh:class ex:FashionWeekEdition ] ;
+  sh:property [ sh:path schema:organizer ; sh:minCount 1 ; sh:or ( [ sh:class schema:Brand ] [ sh:class schema:Organization ] ) ] ;
+  sh:property [ sh:path ex:cnmiEventId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path schema:startDate ; sh:minCount 1 ; sh:datatype xsd:dateTime ] .
+
+ex:EditionShape a sh:NodeShape ;
+  sh:targetClass ex:FashionWeekEdition ;
+  sh:property [ sh:path schema:superEvent ; sh:minCount 1 ] ;
+  sh:property [ sh:path schema:startDate ; sh:minCount 1 ; sh:datatype xsd:date ] ;
+  sh:property [ sh:path schema:endDate ; sh:minCount 1 ; sh:datatype xsd:date ] .

@@ -1,0 +1,92 @@
+{
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query_file": "queries/16a_fashion_week_participant_organizer.rq",
+ "query_sha256_12": "270926a0c2c0",
+ "query": "# Bounded check A: P710/P664/P1344 statements on the fashion-week items (class Q253946), ids only.\nSELECT DISTINCT ?subject ?p ?object WHERE {\n  ?subject wdt:P31 wd:Q253946 .\n  VALUES ?p { wdt:P710 wdt:P664 wdt:P1344 }\n  ?subject ?p ?object .\n}\nORDER BY ?subject\nLIMIT 50\n",
+ "timestamp_utc": "2026-11-19T12:04:55.771820+00:00",
+ "http_status": 200,
+ "response": {
+  "head": {
+   "vars": [
+    "subject",
+    "p",
+    "object"
+   ]
+  },
+  "results": {
+   "bindings": [
+    {
+     "subject": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q118875125"
+     },
+     "p": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/prop/direct/P664"
+     },
+     "object": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q275837"
+     }
+    },
+    {
+     "subject": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q129494634"
+     },
+     "p": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/prop/direct/P664"
+     },
+     "object": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q11221622"
+     }
+    },
+    {
+     "subject": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q131302221"
+     },
+     "p": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/prop/direct/P664"
+     },
+     "object": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q131302214"
+     }
+    },
+    {
+     "subject": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1911707"
+     },
+     "p": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/prop/direct/P664"
+     },
+     "object": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q131302151"
+     }
+    },
+    {
+     "subject": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q2446003"
+     },
+     "p": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/prop/direct/P664"
+     },
+     "object": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q5511543"
+     }
+    }
+   ]
+  }
+ },
+ "row_count": 5
+}

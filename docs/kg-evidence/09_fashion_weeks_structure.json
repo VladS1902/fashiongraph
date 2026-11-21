@@ -1,0 +1,473 @@
+{
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query_file": "queries/09_fashion_weeks_structure.rq",
+ "query_sha256_12": "b885fed8ac7d",
+ "query": "# All fashion-week items (n=28): which carry edition/series/start/location/part-of structure? Shows modelling in other cities.\nSELECT DISTINCT ?fw ?fwLabel ?start ?loc ?locLabel ?edition ?editionLabel ?partOf ?partOfLabel WHERE {\n  ?fw wdt:P31 wd:Q253946 .\n  OPTIONAL { ?fw wdt:P580 ?start }\n  OPTIONAL { ?fw wdt:P276 ?loc }\n  OPTIONAL { ?edition wdt:P179 ?fw }\n  OPTIONAL { ?fw wdt:P361 ?partOf }\n  FILTER(!BOUND(?loc) || ?loc != wd:Q0)\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n}\nORDER BY ?fwLabel\nLIMIT 100\n",
+ "timestamp_utc": "2026-11-19T11:46:37.360496+00:00",
+ "http_status": 200,
+ "response": {
+  "head": {
+   "vars": [
+    "fw",
+    "fwLabel",
+    "start",
+    "loc",
+    "locLabel",
+    "edition",
+    "editionLabel",
+    "partOf",
+    "partOfLabel"
+   ]
+  },
+  "results": {
+   "bindings": [
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q106622798"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Alger Fashion Week"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1911707"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Amsterdam Fashion Week"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q3478312"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Australian Fashion Week"
+     },
+     "start": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1996-01-01T00:00:00Z"
+     },
+     "loc": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q3130"
+     },
+     "locLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Sydney"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q139558322"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Batho Fashion Week"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28455771"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Bolivia Fashion Week"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q76762984"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Colombiamoda"
+     },
+     "loc": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q48278"
+     },
+     "locLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Medellín"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q5265923"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Detroit Fashion Week"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q5436760"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Fashion Week Cleveland"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q129494634"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "GirlsAward 2024 SPRING/SUMMER"
+     },
+     "loc": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1069457"
+     },
+     "locLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Yoyogi National Gymnasium"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q136592755"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "GirlsAward 2025 AUTUMN/WINTER"
+     },
+     "loc": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q136675543"
+     },
+     "locLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "International Exhibition Hall 9-11"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q136592757"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "GirlsAward 2026 SPRING/SUMMER"
+     },
+     "loc": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1069457"
+     },
+     "locLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Yoyogi National Gymnasium"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q141170993"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Guayaquil Fashion Week"
+     },
+     "loc": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q43509"
+     },
+     "locLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Guayaquil"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q131443598"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "IDOL RUNWAY COLLECTION 2025"
+     },
+     "loc": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1069457"
+     },
+     "locLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Yoyogi National Gymnasium"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q6019288"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "India Fashion Week"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q2446735"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "London Fashion Week"
+     },
+     "start": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1984-01-01T00:00:00Z"
+     },
+     "loc": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q84"
+     },
+     "locLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "London"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q6818114"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Mercedes-Benz Fashion Week Miami"
+     },
+     "loc": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q8652"
+     },
+     "locLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Miami"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q16930791"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Miami Fashion Week"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q118875125"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Miami Swim Week"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q130829"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "start": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1958-01-01T00:00:00Z"
+     },
+     "loc": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q490"
+     },
+     "locLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q4316060"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Moscow Fashion Week"
+     },
+     "loc": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q649"
+     },
+     "locLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Moscow"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q125121319"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Nashville Fashion Week"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q16955622"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Nepal Fashion Week"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q136744794"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Original Design Fashion Week"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q18358681"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ottawa fashion week"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q2446003"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Paris Fashion Week"
+     },
+     "start": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1973-01-01T00:00:00Z"
+     },
+     "loc": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q90"
+     },
+     "locLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Paris"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q38277641"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Portland Fashion Week"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q122211919"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Seoul Fashion Week"
+     },
+     "loc": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q8684"
+     },
+     "locLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Seoul"
+     }
+    },
+    {
+     "fw": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q131302221"
+     },
+     "fwLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "The Fashionweek The Hague"
+     }
+    }
+   ]
+  }
+ },
+ "row_count": 28
+}

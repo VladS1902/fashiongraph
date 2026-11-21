@@ -1,0 +1,5 @@
+[
+  {"provider": "openai", "model_id": "PLACEHOLDER-set-exact-model-id"},
+  {"provider": "gemini", "model_id": "PLACEHOLDER-set-exact-model-id"},
+  {"provider": "mistral", "model_id": "PLACEHOLDER-set-exact-model-id"}
+]

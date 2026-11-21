@@ -1,0 +1,10 @@
+{"id": "mfw-ss27-13639", "expected": {"show_name": "PRADA", "brand": "PRADA", "event_type": "fashion show", "date_time": "2026-09-22T14:00", "venue": "Via Lorenzini, 14"}}
+{"id": "mfw-ss27-13700", "expected": {"show_name": "VOGUE WORLD: MILANO", "brand": null, "_unscored": ["brand"], "event_type": "fashion show", "date_time": "2026-09-22T20:00", "venue": null}}
+{"id": "mfw-ss27-13645", "expected": {"show_name": "JIL SANDER *", "brand": "JIL SANDER *", "event_type": "fashion show", "date_time": "2026-09-23T10:30", "venue": null}}
+{"id": "mfw-ss27-13646", "expected": {"show_name": "DANIELA GREGIS", "brand": "DANIELA GREGIS", "event_type": "fashion show", "date_time": "2026-09-23T11:30", "venue": "Piazza Sant'Ambrogio, 23A"}}
+{"id": "mfw-ss27-13685", "expected": {"show_name": "MM6 MAISON MARGIELA *", "brand": "MM6 MAISON MARGIELA *", "event_type": "fashion show", "date_time": "2026-09-23T18:00", "venue": null}}
+{"id": "mfw-ss27-13691", "expected": {"show_name": "GENNY", "brand": "GENNY", "event_type": "fashion show", "date_time": "2026-09-24T10:30", "venue": "Via Rubattino, 56"}}
+{"id": "mfw-ss27-13669", "expected": {"show_name": "SPORTMAX", "brand": "SPORTMAX", "event_type": "fashion show", "date_time": "2026-09-25T11:30", "venue": "Corso Magenta, 24"}}
+{"id": "mfw-ss27-13659", "expected": {"show_name": "ERMANNO SCERVINO", "brand": "ERMANNO SCERVINO", "event_type": "fashion show", "date_time": "2026-09-26T10:30", "venue": "Piazza Lina Bo Bardi, 1"}}
+{"id": "mfw-ss27-13652", "expected": {"show_name": "GIORGIO ARMANI", "brand": "GIORGIO ARMANI", "event_type": "fashion show", "date_time": "2026-09-27T11:00", "venue": "Via Bergognone, 59"}}
+{"id": "mfw-ss27-13648", "expected": {"show_name": "NADYA DZYAK", "brand": "NADYA DZYAK", "event_type": "fashion show", "date_time": "2026-09-28T10:00", "venue": null}}

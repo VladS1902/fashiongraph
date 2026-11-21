@@ -1,0 +1,21 @@
+{
+ "dataset": "fashiongraph-pilot-gold",
+ "version": "0.2.0",
+ "records": 10,
+ "sha256": "72712fdb5020b88c077f81742673af49038691619bf483eb65ddd41a1be5980b",
+ "frozen_on": "2026-11-19",
+ "source_id": "cnmi-calendar-ss27",
+ "source_html_sha256": "5713ab769f35bda089de3878da596a065ac13fd836c13a46ed529cede899180b",
+ "annotation_policy": "annotation-policy-v1 (provisionally approved 2026-11-19; see docs/annotation-guidelines.md)",
+ "review_status": "annotation policy provisionally approved; machine second-pass passed; HUMAN VERIFICATION PENDING (human_verified=false on every record)",
+ "split_policy": "splits unassigned; test/train defined in data/experiment/MANIFEST.json",
+ "change_rule": "any content change requires a new version + new checksum; previous versions are kept in data/gold/archive/",
+ "history": [
+  {
+   "version": "0.1.0",
+   "sha256": "edf61b8f19bee26332838c9d8b7e7b905436e801c26eed902721367488949200",
+   "file": "archive/gold_pilot.v0.1.0.jsonl"
+  }
+ ],
+ "changes_vs_previous": "venue_status 'withheld' -> 'invitation_only'; added entry_kind (VOGUE WORLD unclassified, brand_raw null), source_row_text, ambiguities, annotation_policy, human_verified=false"
+}

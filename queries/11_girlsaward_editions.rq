@@ -1,0 +1,14 @@
+# Modelling precedent check: do GirlsAward editions exist as separate items with venue and date?
+SELECT DISTINCT ?item ?itemLabel ?start ?venueLabel WHERE {
+  SERVICE wikibase:mwapi {
+    bd:serviceParam wikibase:api "EntitySearch" ; wikibase:endpoint "www.wikidata.org" ;
+      mwapi:search "GirlsAward" ; mwapi:language "en" .
+    ?item wikibase:apiOutputItem mwapi:item .
+  }
+  ?item rdfs:label ?l . FILTER(REGEX(?l, "GirlsAward", "i"))
+  OPTIONAL { ?item wdt:P580 ?start }
+  OPTIONAL { ?item wdt:P276 ?venue }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+ORDER BY ?itemLabel
+LIMIT 15

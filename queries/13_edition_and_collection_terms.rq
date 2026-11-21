@@ -1,0 +1,12 @@
+# Follow-up: edition / season / collection terminology (Spring/Summer 2027, Primavera/Estate) near Milan fashion.
+SELECT DISTINCT ?item ?itemLabel ?itemDescription WHERE {
+  SERVICE wikibase:mwapi {
+    bd:serviceParam wikibase:api "EntitySearch" ; wikibase:endpoint "www.wikidata.org" ;
+      mwapi:search "Milano Fashion Week 2026" ; mwapi:language "it" .
+    ?item wikibase:apiOutputItem mwapi:item .
+  }
+  ?item rdfs:label ?itemLabel . FILTER(LANG(?itemLabel) IN ("it","en") && REGEX(?itemLabel, "moda|fashion|collezione|sfilata|Spring|Primavera|2026|2027", "i"))
+  OPTIONAL { ?item schema:description ?itemDescription FILTER(LANG(?itemDescription) IN ("it","en")) }
+}
+ORDER BY ?itemLabel
+LIMIT 20

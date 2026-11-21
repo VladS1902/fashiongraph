@@ -1,0 +1,14 @@
+# Fashion-week entities: UNION of (a) instances of fashion week (Q253946) and (b) items linked to Q130829
+# by part-of / instance-of / participant-in. REGEX keeps Milan-related labels only.
+# (An unbounded label scan over all items timed out with HTTP 504, so the query is restricted by class/links.)
+SELECT DISTINCT ?item ?label ?desc WHERE {
+  { ?item wdt:P31 wd:Q253946 }
+  UNION { ?item wdt:P361 wd:Q130829 }
+  UNION { ?item wdt:P31 wd:Q130829 }
+  UNION { ?item wdt:P1344 wd:Q130829 }
+  ?item rdfs:label ?label . FILTER(LANG(?label)="en")
+  FILTER(REGEX(?label, "Milan|Milano|Settimana", "i"))
+  OPTIONAL { ?item schema:description ?desc FILTER(LANG(?desc)="en") }
+}
+ORDER BY ?label
+LIMIT 50

@@ -1,0 +1,16 @@
+# Brands found by name (UNION of label VALUES via REGEX) : classes, HQ, participant-in, venue-like links.
+# Tests whether linked brand entities exist and carry event-related statements.
+SELECT DISTINCT ?brand ?brandLabel ?classLabel ?hqLabel ?event ?eventLabel WHERE {
+  SERVICE wikibase:mwapi {
+    bd:serviceParam wikibase:api "EntitySearch" ; wikibase:endpoint "www.wikidata.org" ;
+      mwapi:search "Prada" ; mwapi:language "en" .
+    ?brand wikibase:apiOutputItem mwapi:item .
+  }
+  ?brand rdfs:label ?l . FILTER(REGEX(?l, "^(Prada|Fondazione Prada|Miu Miu)$", "i"))
+  OPTIONAL { ?brand wdt:P31 ?class }
+  OPTIONAL { ?brand wdt:P159 ?hq }
+  OPTIONAL { ?brand wdt:P1344 ?event }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+ORDER BY ?brandLabel
+LIMIT 50

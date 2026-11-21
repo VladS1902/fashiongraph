@@ -1,0 +1,9 @@
+# Which Wikidata classes exist for fashion shows / weeks and how many instances (reuse check for modelling).
+SELECT DISTINCT ?class ?classLabel (COUNT(?i) AS ?n) WHERE {
+  VALUES ?class { wd:Q253946 wd:Q1171323 wd:Q1067375 }
+  ?i wdt:P31 ?class .
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+GROUP BY ?class ?classLabel
+ORDER BY DESC(?n)
+LIMIT 10

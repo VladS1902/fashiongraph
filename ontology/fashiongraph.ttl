@@ -1,0 +1,26 @@
+@prefix ex: <https://example.org/fashiongraph/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <https://schema.org/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+# Custom classes (justified in docs/ontology.md): schema.org / Wikidata model neither fashion-week editions nor fashion shows.
+ex:FashionWeekEdition a rdfs:Class ; rdfs:subClassOf schema:Event ;
+  rdfs:label "Fashion week edition"@en ; rdfs:comment "One dated occurrence of a fashion week series (e.g. Milano Moda Donna SS2027)."@en .
+ex:FashionShow a rdfs:Class ; rdfs:subClassOf schema:Event ;
+  rdfs:label "Fashion show"@en ; rdfs:comment "A single runway show or presentation listed in an edition's calendar."@en .
+ex:FashionCollection a rdfs:Class ; rdfs:subClassOf schema:CreativeWork ;
+  rdfs:label "Fashion collection"@en ; rdfs:comment "A seasonal collection presented at a show (modelled; no gold evidence yet)."@en .
+
+# Custom properties
+ex:presentsCollection a rdf:Property ; rdfs:domain ex:FashionShow ; rdfs:range ex:FashionCollection ;
+  rdfs:label "presents collection"@en .
+ex:cnmiEventId a rdf:Property ; rdfs:domain ex:FashionShow ; rdfs:label "CNMI calendar event id"@en .
+ex:calendarTypeCode a rdf:Property ; rdfs:domain ex:FashionShow ; rdfs:label "CNMI calendar type code"@en .
+ex:evidenceQuote a rdf:Property ; rdfs:label "evidence quote"@en ; rdfs:comment "Verbatim source evidence supporting the triples about this resource."@en .
+ex:extractionRun a rdf:Property ; rdfs:label "extraction run id"@en .
+ex:eventType a rdf:Property ; rdfs:label "event type (free text)"@en .
+
+# Alignments (documentation, not asserted facts about instances)
+ex:FashionWeekEdition rdfs:seeAlso wd:Q253946 .   # Wikidata class: fashion week

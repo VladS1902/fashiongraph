@@ -1,0 +1,33 @@
+{
+ "total_triples": 153,
+ "shacl_conforms": true,
+ "by_kind": {
+  "factual": 61,
+  "structural": 49,
+  "provenance": 42,
+  "link": 1
+ },
+ "by_vocabulary": {
+  "reused": 111,
+  "custom": 42
+ },
+ "by_kind_and_vocabulary": {
+  "factual/reused": 61,
+  "structural/reused": 38,
+  "provenance/custom": 31,
+  "structural/custom": 11,
+  "provenance/reused": 11,
+  "link/reused": 1
+ },
+ "by_entity_novelty_status": {
+  "about_new_entity": 113,
+  "unchecked_entity": 38,
+  "about_existing_entity": 2
+ },
+ "factual_source_checks": {
+  "supported": 61
+ },
+ "unsupported": [],
+ "factual_triples_about_new_entities": 39,
+ "note": "novelty is relative to Wikidata label/EntitySearch evidence only (queries 04,06,09,12-15); other KGs unchecked; absence evidence is bounded, not proof"
+}

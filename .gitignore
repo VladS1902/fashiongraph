@@ -1,0 +1,23 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+kg/cache/
+experiments/cache/
+experiments/runs/
+outputs/private/
+*.tmp
+*.log
+site/dist/
+data/raw/
+outputs/
+
+# Lecturer-provided course material: kept locally, not redistributed (see README)
+references/
+.pytest_results_backup/
+share/

@@ -1,0 +1,188 @@
+@prefix ex: <https://example.org/fashiongraph/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/fashiongraph/show/daniela-gregis-13646> a ex:FashionShow,
+        schema:Event ;
+    rdfs:label "DANIELA GREGIS" ;
+    prov:wasDerivedFrom <https://www.cameramoda.it/en/milano-moda-donna/calendar/> ;
+    ex:calendarTypeCode "F" ;
+    ex:cnmiEventId "13646" ;
+    ex:evidenceQuote "Calendar row data-id-event=13646: type F, time '11:30 live', title 'DANIELA GREGIS', address 'Piazza Sant'Ambrogio, 23A', under day heading 2026-09-23" ;
+    schema:location <https://example.org/fashiongraph/venue/piazza-sant-ambrogio-23a> ;
+    schema:organizer <https://example.org/fashiongraph/brand/daniela-gregis> ;
+    schema:startDate "2026-09-23T11:30:00"^^xsd:dateTime ;
+    schema:superEvent <https://example.org/fashiongraph/edition/milano-moda-donna-ss2027> .
+
+<https://example.org/fashiongraph/show/ermanno-scervino-13659> a ex:FashionShow,
+        schema:Event ;
+    rdfs:label "ERMANNO SCERVINO" ;
+    prov:wasDerivedFrom <https://www.cameramoda.it/en/milano-moda-donna/calendar/> ;
+    ex:calendarTypeCode "F" ;
+    ex:cnmiEventId "13659" ;
+    ex:evidenceQuote "Calendar row data-id-event=13659: type F, time '10:30 live', title 'ERMANNO SCERVINO', address 'Piazza Lina Bo Bardi, 1', under day heading 2026-09-26" ;
+    schema:location <https://example.org/fashiongraph/venue/piazza-lina-bo-bardi-1> ;
+    schema:organizer <https://example.org/fashiongraph/brand/ermanno-scervino> ;
+    schema:startDate "2026-09-26T10:30:00"^^xsd:dateTime ;
+    schema:superEvent <https://example.org/fashiongraph/edition/milano-moda-donna-ss2027> .
+
+<https://example.org/fashiongraph/show/genny-13691> a ex:FashionShow,
+        schema:Event ;
+    rdfs:label "GENNY" ;
+    prov:wasDerivedFrom <https://www.cameramoda.it/en/milano-moda-donna/calendar/> ;
+    ex:calendarTypeCode "F" ;
+    ex:cnmiEventId "13691" ;
+    ex:evidenceQuote "Calendar row data-id-event=13691: type F, time '10:30 live', title 'GENNY', address 'Via Rubattino, 56', under day heading 2026-09-24" ;
+    schema:location <https://example.org/fashiongraph/venue/via-rubattino-56> ;
+    schema:organizer <https://example.org/fashiongraph/brand/genny> ;
+    schema:startDate "2026-09-24T10:30:00"^^xsd:dateTime ;
+    schema:superEvent <https://example.org/fashiongraph/edition/milano-moda-donna-ss2027> .
+
+<https://example.org/fashiongraph/show/giorgio-armani-13652> a ex:FashionShow,
+        schema:Event ;
+    rdfs:label "GIORGIO ARMANI" ;
+    prov:wasDerivedFrom <https://www.cameramoda.it/en/milano-moda-donna/calendar/> ;
+    ex:calendarTypeCode "F" ;
+    ex:cnmiEventId "13652" ;
+    ex:evidenceQuote "Calendar row data-id-event=13652: type F, time '11:00 live', title 'GIORGIO ARMANI', address 'Via Bergognone, 59', under day heading 2026-09-27" ;
+    schema:location <https://example.org/fashiongraph/venue/via-bergognone-59> ;
+    schema:organizer <https://example.org/fashiongraph/brand/giorgio-armani> ;
+    schema:startDate "2026-09-27T11:00:00"^^xsd:dateTime ;
+    schema:superEvent <https://example.org/fashiongraph/edition/milano-moda-donna-ss2027> .
+
+<https://example.org/fashiongraph/show/jil-sander-13645> a ex:FashionShow,
+        schema:Event ;
+    rdfs:label "JIL SANDER *" ;
+    prov:wasDerivedFrom <https://www.cameramoda.it/en/milano-moda-donna/calendar/> ;
+    ex:calendarTypeCode "F" ;
+    ex:cnmiEventId "13645" ;
+    ex:evidenceQuote "Calendar row data-id-event=13645: type F, time '10:30 live', title 'JIL SANDER *', address 'Location in the invitation', under day heading 2026-09-23" ;
+    schema:organizer <https://example.org/fashiongraph/brand/jil-sander> ;
+    schema:startDate "2026-09-23T10:30:00"^^xsd:dateTime ;
+    schema:superEvent <https://example.org/fashiongraph/edition/milano-moda-donna-ss2027> .
+
+<https://example.org/fashiongraph/show/mm6-maison-margiela-13685> a ex:FashionShow,
+        schema:Event ;
+    rdfs:label "MM6 MAISON MARGIELA *" ;
+    prov:wasDerivedFrom <https://www.cameramoda.it/en/milano-moda-donna/calendar/> ;
+    ex:calendarTypeCode "F" ;
+    ex:cnmiEventId "13685" ;
+    ex:evidenceQuote "Calendar row data-id-event=13685: type F, time '18:00 live', title 'MM6 MAISON MARGIELA *', address 'Location In The Invitation', under day heading 2026-09-23" ;
+    schema:organizer <https://example.org/fashiongraph/brand/mm6-maison-margiela> ;
+    schema:startDate "2026-09-23T18:00:00"^^xsd:dateTime ;
+    schema:superEvent <https://example.org/fashiongraph/edition/milano-moda-donna-ss2027> .
+
+<https://example.org/fashiongraph/show/nadya-dzyak-13648> a ex:FashionShow,
+        schema:Event ;
+    rdfs:label "NADYA DZYAK" ;
+    prov:wasDerivedFrom <https://www.cameramoda.it/en/milano-moda-donna/calendar/> ;
+    ex:calendarTypeCode "F" ;
+    ex:cnmiEventId "13648" ;
+    ex:evidenceQuote "Calendar row data-id-event=13648: type F, time '10:00', title 'NADYA DZYAK', address 'DIGITAL', under day heading 2026-09-28" ;
+    schema:organizer <https://example.org/fashiongraph/brand/nadya-dzyak> ;
+    schema:startDate "2026-09-28T10:00:00"^^xsd:dateTime ;
+    schema:superEvent <https://example.org/fashiongraph/edition/milano-moda-donna-ss2027> .
+
+<https://example.org/fashiongraph/show/prada-13639> a ex:FashionShow,
+        schema:Event ;
+    rdfs:label "PRADA" ;
+    prov:wasDerivedFrom <https://www.cameramoda.it/en/milano-moda-donna/calendar/> ;
+    ex:calendarTypeCode "F" ;
+    ex:cnmiEventId "13639" ;
+    ex:evidenceQuote "Calendar row data-id-event=13639: type F, time '14:00 live', title 'PRADA', address 'Via Lorenzini, 14', under day heading 2026-09-22" ;
+    schema:location <https://example.org/fashiongraph/venue/via-lorenzini-14> ;
+    schema:organizer <https://example.org/fashiongraph/brand/prada> ;
+    schema:startDate "2026-09-22T14:00:00"^^xsd:dateTime ;
+    schema:superEvent <https://example.org/fashiongraph/edition/milano-moda-donna-ss2027> .
+
+<https://example.org/fashiongraph/show/sportmax-13669> a ex:FashionShow,
+        schema:Event ;
+    rdfs:label "SPORTMAX" ;
+    prov:wasDerivedFrom <https://www.cameramoda.it/en/milano-moda-donna/calendar/> ;
+    ex:calendarTypeCode "F" ;
+    ex:cnmiEventId "13669" ;
+    ex:evidenceQuote "Calendar row data-id-event=13669: type F, time '11:30 live', title 'SPORTMAX', address 'Corso Magenta, 24', under day heading 2026-09-25" ;
+    schema:location <https://example.org/fashiongraph/venue/corso-magenta-24> ;
+    schema:organizer <https://example.org/fashiongraph/brand/sportmax> ;
+    schema:startDate "2026-09-25T11:30:00"^^xsd:dateTime ;
+    schema:superEvent <https://example.org/fashiongraph/edition/milano-moda-donna-ss2027> .
+
+<https://example.org/fashiongraph/show/vogue-world-milano-13700> a ex:FashionShow,
+        schema:Event ;
+    rdfs:label "VOGUE WORLD: MILANO" ;
+    prov:wasDerivedFrom <https://www.cameramoda.it/en/milano-moda-donna/calendar/> ;
+    ex:calendarTypeCode "F" ;
+    ex:cnmiEventId "13700" ;
+    ex:evidenceQuote "Calendar row data-id-event=13700: type F, time '20:00', title 'VOGUE WORLD: MILANO', address 'None', under day heading 2026-09-22" ;
+    schema:organizer <https://example.org/fashiongraph/org/vogue-world-milano> ;
+    schema:startDate "2026-09-22T20:00:00"^^xsd:dateTime ;
+    schema:superEvent <https://example.org/fashiongraph/edition/milano-moda-donna-ss2027> .
+
+<https://example.org/fashiongraph/brand/daniela-gregis> a schema:Brand ;
+    rdfs:label "DANIELA GREGIS" .
+
+<https://example.org/fashiongraph/brand/ermanno-scervino> a schema:Brand ;
+    rdfs:label "ERMANNO SCERVINO" .
+
+<https://example.org/fashiongraph/brand/genny> a schema:Brand ;
+    rdfs:label "GENNY" .
+
+<https://example.org/fashiongraph/brand/giorgio-armani> a schema:Brand ;
+    rdfs:label "GIORGIO ARMANI" .
+
+<https://example.org/fashiongraph/brand/jil-sander> a schema:Brand ;
+    rdfs:label "JIL SANDER" .
+
+<https://example.org/fashiongraph/brand/mm6-maison-margiela> a schema:Brand ;
+    rdfs:label "MM6 MAISON MARGIELA" .
+
+<https://example.org/fashiongraph/brand/nadya-dzyak> a schema:Brand ;
+    rdfs:label "NADYA DZYAK" .
+
+<https://example.org/fashiongraph/brand/prada> a schema:Brand ;
+    rdfs:label "PRADA" ;
+    owl:sameAs wd:Q193136 .
+
+<https://example.org/fashiongraph/brand/sportmax> a schema:Brand ;
+    rdfs:label "SPORTMAX" .
+
+<https://example.org/fashiongraph/org/vogue-world-milano> a schema:Organization ;
+    rdfs:label "VOGUE WORLD: MILANO" .
+
+<https://example.org/fashiongraph/venue/corso-magenta-24> a schema:Place ;
+    rdfs:label "Corso Magenta, 24" ;
+    schema:streetAddress "Corso Magenta, 24" .
+
+<https://example.org/fashiongraph/venue/piazza-lina-bo-bardi-1> a schema:Place ;
+    rdfs:label "Piazza Lina Bo Bardi, 1" ;
+    schema:streetAddress "Piazza Lina Bo Bardi, 1" .
+
+<https://example.org/fashiongraph/venue/piazza-sant-ambrogio-23a> a schema:Place ;
+    rdfs:label "Piazza Sant'Ambrogio, 23A" ;
+    schema:streetAddress "Piazza Sant'Ambrogio, 23A" .
+
+<https://example.org/fashiongraph/venue/via-bergognone-59> a schema:Place ;
+    rdfs:label "Via Bergognone, 59" ;
+    schema:streetAddress "Via Bergognone, 59" .
+
+<https://example.org/fashiongraph/venue/via-lorenzini-14> a schema:Place ;
+    rdfs:label "Via Lorenzini, 14" ;
+    schema:streetAddress "Via Lorenzini, 14" .
+
+<https://example.org/fashiongraph/venue/via-rubattino-56> a schema:Place ;
+    rdfs:label "Via Rubattino, 56" ;
+    schema:streetAddress "Via Rubattino, 56" .
+
+<https://example.org/fashiongraph/edition/milano-moda-donna-ss2027> a ex:FashionWeekEdition,
+        schema:Event ;
+    rdfs:label "Milano Moda Donna Spring/Summer 2027" ;
+    prov:wasDerivedFrom <https://www.cameramoda.it/en/milano-moda-donna/calendar/> ;
+    ex:evidenceQuote "SPRING/SUMMER 2027 - 22-28 SEPTEMBER 2026" ;
+    schema:endDate "2026-09-28"^^xsd:date ;
+    schema:startDate "2026-09-22"^^xsd:date ;
+    schema:superEvent wd:Q130829 .
+

@@ -1,0 +1,10 @@
+# CONTROL: Italian entity search must find a known item (Milano), proving the it-language MWAPI path works (guards against false negatives in 12-14).
+SELECT DISTINCT ?item ?itemLabel WHERE {
+  SERVICE wikibase:mwapi {
+    bd:serviceParam wikibase:api "EntitySearch" ; wikibase:endpoint "www.wikidata.org" ;
+      mwapi:search "Settimana della moda di Milano" ; mwapi:language "it" .
+    ?item wikibase:apiOutputItem mwapi:item .
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "it,en". }
+}
+LIMIT 10

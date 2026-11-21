@@ -1,0 +1,11 @@
+# Coverage of Milan-headquartered fashion houses (class resolved from Prada's own P31 labelled "fashion house").
+# Counts houses overall, with a participant-in (P1344) statement, with website, with inception.
+SELECT (COUNT(DISTINCT ?b) AS ?houses) (COUNT(DISTINCT ?bPart) AS ?withParticipantIn)
+       (COUNT(DISTINCT ?bWeb) AS ?withWebsite) (COUNT(DISTINCT ?bInc) AS ?withInception) WHERE {
+  wd:Q193136 wdt:P31 ?cls . ?cls rdfs:label "fashion house"@en .
+  ?b wdt:P31 ?cls ; wdt:P159 wd:Q490 .
+  OPTIONAL { ?b wdt:P1344 ?e . BIND(?b AS ?bPart) }
+  OPTIONAL { ?b wdt:P856 ?w . BIND(?b AS ?bWeb) }
+  OPTIONAL { ?b wdt:P571 ?i . BIND(?b AS ?bInc) }
+}
+LIMIT 1

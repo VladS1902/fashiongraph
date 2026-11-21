@@ -1,0 +1,21 @@
+{
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query_file": "queries/13_edition_and_collection_terms.rq",
+ "query_sha256_12": "c0460c53711f",
+ "query": "# Follow-up: edition / season / collection terminology (Spring/Summer 2027, Primavera/Estate) near Milan fashion.\nSELECT DISTINCT ?item ?itemLabel ?itemDescription WHERE {\n  SERVICE wikibase:mwapi {\n    bd:serviceParam wikibase:api \"EntitySearch\" ; wikibase:endpoint \"www.wikidata.org\" ;\n      mwapi:search \"Milano Fashion Week 2026\" ; mwapi:language \"it\" .\n    ?item wikibase:apiOutputItem mwapi:item .\n  }\n  ?item rdfs:label ?itemLabel . FILTER(LANG(?itemLabel) IN (\"it\",\"en\") && REGEX(?itemLabel, \"moda|fashion|collezione|sfilata|Spring|Primavera|2026|2027\", \"i\"))\n  OPTIONAL { ?item schema:description ?itemDescription FILTER(LANG(?itemDescription) IN (\"it\",\"en\")) }\n}\nORDER BY ?itemLabel\nLIMIT 20\n",
+ "timestamp_utc": "2026-11-19T11:55:31.240682+00:00",
+ "http_status": 200,
+ "response": {
+  "head": {
+   "vars": [
+    "item",
+    "itemLabel",
+    "itemDescription"
+   ]
+  },
+  "results": {
+   "bindings": []
+  }
+ },
+ "row_count": 0
+}

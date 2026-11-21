@@ -1,0 +1,12 @@
+# All fashion-week items (n=28): which carry edition/series/start/location/part-of structure? Shows modelling in other cities.
+SELECT DISTINCT ?fw ?fwLabel ?start ?loc ?locLabel ?edition ?editionLabel ?partOf ?partOfLabel WHERE {
+  ?fw wdt:P31 wd:Q253946 .
+  OPTIONAL { ?fw wdt:P580 ?start }
+  OPTIONAL { ?fw wdt:P276 ?loc }
+  OPTIONAL { ?edition wdt:P179 ?fw }
+  OPTIONAL { ?fw wdt:P361 ?partOf }
+  FILTER(!BOUND(?loc) || ?loc != wd:Q0)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+ORDER BY ?fwLabel
+LIMIT 100

@@ -1,0 +1,13 @@
+{
+ "version": "0.1.1",
+ "gold_sha256": "0265b3dd5a457020a0ba5327e81c95743254ddcbe7671eb8f8291cefa0a7acd1",
+ "sha256": {
+  "test_inputs.jsonl": "684dc5f900a1106eca7dfa6ede13f9d8309c4a09bd0936a3f5a6fe7adf1c208e",
+  "expected.jsonl": "5fdf2cf7c3b3f97d2a6fe1aa876f67c7188e576af6b54fe426f3a832fd32bd9e",
+  "fewshot_train.jsonl": "b8477101efe51f09557334b70ec0bcd30237943d53a33042e7e8ddefd87cf59a"
+ },
+ "n_test": 10,
+ "n_train_examples": 3,
+ "train_includes_withheld_venue_example": true,
+ "leakage_check": "train ids and normalised titles disjoint from test (asserted at build)"
+}

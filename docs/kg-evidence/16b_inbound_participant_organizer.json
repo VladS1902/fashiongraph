@@ -1,0 +1,61 @@
+{
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query_file": "queries/16b_inbound_participant_organizer.rq",
+ "query_sha256_12": "fa4a2a52e273",
+ "query": "# Bounded check B: items pointing to Q130829 with P710/P664/P1344, ids only.\nSELECT DISTINCT ?object ?p WHERE {\n  VALUES ?p { wdt:P710 wdt:P664 wdt:P1344 }\n  ?object ?p wd:Q130829 .\n}\nORDER BY ?object\nLIMIT 50\n",
+ "timestamp_utc": "2026-11-19T12:04:57.300558+00:00",
+ "http_status": 200,
+ "response": {
+  "head": {
+   "vars": [
+    "object",
+    "p"
+   ]
+  },
+  "results": {
+   "bindings": [
+    {
+     "object": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q135188665"
+     },
+     "p": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/prop/direct/P1344"
+     }
+    },
+    {
+     "object": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q138335797"
+     },
+     "p": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/prop/direct/P1344"
+     }
+    },
+    {
+     "object": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q138427211"
+     },
+     "p": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/prop/direct/P1344"
+     }
+    },
+    {
+     "object": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q139062822"
+     },
+     "p": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/prop/direct/P1344"
+     }
+    }
+   ]
+  }
+ },
+ "row_count": 4
+}

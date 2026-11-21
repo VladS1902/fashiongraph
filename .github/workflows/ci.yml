@@ -1,0 +1,28 @@
+# Lint + tests + site build on every push/PR. Prepared locally; takes effect only after the owner approves publishing the repository.
+name: ci
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install rdflib pytest ruff requests pyshacl pypdf markdown python-pptx
+      - run: ruff check . && ruff format --check .
+      - run: pytest -q
+      - run: python reports/build_report.py && python site/build.py
+      - uses: actions/upload-pages-artifact@v3
+        with: {path: site/dist}
+  deploy:   # GitHub Pages deployment; requires Pages enabled with source "GitHub Actions" (owner action)
+    if: github.ref == 'refs/heads/main'
+    needs: check
+    runs-on: ubuntu-latest
+    permissions: {pages: write, id-token: write}
+    environment: {name: github-pages, url: "${{ steps.d.outputs.page_url }}"}
+    steps:
+      - id: d
+        uses: actions/deploy-pages@v4

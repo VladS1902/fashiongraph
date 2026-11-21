@@ -1,0 +1,12 @@
+# Follow-up (Italian labels / alternative terminology): items named Milano Moda Donna / Settimana della moda di Milano / Milano Fashion Week.
+SELECT DISTINCT ?item ?itemLabel ?itemDescription ?class ?classLabel WHERE {
+  SERVICE wikibase:mwapi {
+    bd:serviceParam wikibase:api "EntitySearch" ; wikibase:endpoint "www.wikidata.org" ;
+      mwapi:search "Milano Moda Donna" ; mwapi:language "it" .
+    ?item wikibase:apiOutputItem mwapi:item .
+  }
+  OPTIONAL { ?item wdt:P31 ?class }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "it,en". }
+}
+ORDER BY ?itemLabel
+LIMIT 20

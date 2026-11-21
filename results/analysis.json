@@ -1,0 +1,719 @@
+{
+ "cells": {
+  "gemini-3.5-flash-lite | few_shot": {
+   "n_records": 10,
+   "exact_records": 10,
+   "records_with_errors": 0,
+   "examples": [],
+   "outcomes": {
+    "mfw-ss27-13639": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13645": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13646": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13648": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13652": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13659": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13669": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13685": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13691": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13700": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    }
+   }
+  },
+  "gemini-3.5-flash-lite | step_by_step": {
+   "n_records": 10,
+   "exact_records": 10,
+   "records_with_errors": 0,
+   "examples": [],
+   "outcomes": {
+    "mfw-ss27-13639": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13645": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13646": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13648": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13652": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13659": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13669": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13685": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13691": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13700": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    }
+   }
+  },
+  "gemini-3.5-flash-lite | zero_shot": {
+   "n_records": 10,
+   "exact_records": 10,
+   "records_with_errors": 0,
+   "examples": [],
+   "outcomes": {
+    "mfw-ss27-13639": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13645": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13646": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13648": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13652": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13659": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13669": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13685": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13691": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13700": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    }
+   }
+  },
+  "openai/gpt-oss-120b | few_shot": {
+   "n_records": 10,
+   "exact_records": 10,
+   "records_with_errors": 0,
+   "examples": [],
+   "outcomes": {
+    "mfw-ss27-13639": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13645": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13646": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13648": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13652": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13659": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13669": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13685": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13691": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13700": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    }
+   }
+  },
+  "openai/gpt-oss-120b | step_by_step": {
+   "n_records": 10,
+   "exact_records": 10,
+   "records_with_errors": 0,
+   "examples": [],
+   "outcomes": {
+    "mfw-ss27-13639": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13645": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13646": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13648": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13652": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13659": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13669": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13685": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13691": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13700": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    }
+   }
+  },
+  "openai/gpt-oss-120b | zero_shot": {
+   "n_records": 10,
+   "exact_records": 10,
+   "records_with_errors": 0,
+   "examples": [],
+   "outcomes": {
+    "mfw-ss27-13639": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13645": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13646": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13648": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13652": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13659": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13669": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13685": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13691": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13700": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    }
+   }
+  },
+  "qwen/qwen3.8-27b | few_shot": {
+   "n_records": 10,
+   "exact_records": 8,
+   "records_with_errors": 2,
+   "examples": [
+    {
+     "record": "mfw-ss27-13659",
+     "status": "ok",
+     "diffs": [
+      {
+       "field": "brand",
+       "expected": "ERMANNO SCERVINO",
+       "predicted": "ERMANNO SCERFINO",
+       "error": "wrong_value"
+      }
+     ]
+    },
+    {
+     "record": "mfw-ss27-13685",
+     "status": "invalid",
+     "diffs": [
+      {
+       "field": "*",
+       "expected": null,
+       "predicted": null,
+       "error": "invalid_output"
+      }
+     ]
+    }
+   ],
+   "outcomes": {
+    "mfw-ss27-13639": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13645": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13646": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13648": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13652": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13659": {
+     "kind": "errors",
+     "n_diffs": 1,
+     "error_class": null
+    },
+    "mfw-ss27-13669": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13685": {
+     "kind": "invalid",
+     "n_diffs": 1,
+     "error_class": "provider_generation_failure"
+    },
+    "mfw-ss27-13691": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13700": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    }
+   }
+  },
+  "qwen/qwen3.8-27b | step_by_step": {
+   "n_records": 10,
+   "exact_records": 8,
+   "records_with_errors": 2,
+   "examples": [
+    {
+     "record": "mfw-ss27-13639",
+     "status": "invalid",
+     "diffs": [
+      {
+       "field": "*",
+       "expected": null,
+       "predicted": null,
+       "error": "invalid_output"
+      }
+     ]
+    },
+    {
+     "record": "mfw-ss27-13700",
+     "status": "invalid",
+     "diffs": [
+      {
+       "field": "*",
+       "expected": null,
+       "predicted": null,
+       "error": "invalid_output"
+      }
+     ]
+    }
+   ],
+   "outcomes": {
+    "mfw-ss27-13639": {
+     "kind": "invalid",
+     "n_diffs": 1,
+     "error_class": "provider_generation_failure"
+    },
+    "mfw-ss27-13645": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13646": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13648": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13652": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13659": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13669": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13685": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13691": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13700": {
+     "kind": "invalid",
+     "n_diffs": 1,
+     "error_class": "provider_generation_failure"
+    }
+   }
+  },
+  "qwen/qwen3.8-27b | zero_shot": {
+   "n_records": 10,
+   "exact_records": 5,
+   "records_with_errors": 5,
+   "examples": [
+    {
+     "record": "mfw-ss27-13645",
+     "status": "ok",
+     "diffs": [
+      {
+       "field": "evidence_quote",
+       "expected": "verbatim quote",
+       "predicted": "F | 10:30 live | JIL Sander * | Location in the invitation",
+       "error": "evidence_not_verbatim"
+      }
+     ]
+    },
+    {
+     "record": "mfw-ss27-13659",
+     "status": "invalid",
+     "diffs": [
+      {
+       "field": "*",
+       "expected": null,
+       "predicted": null,
+       "error": "invalid_output"
+      }
+     ]
+    },
+    {
+     "record": "mfw-ss27-13669",
+     "status": "invalid",
+     "diffs": [
+      {
+       "field": "*",
+       "expected": null,
+       "predicted": null,
+       "error": "invalid_output"
+      }
+     ]
+    }
+   ],
+   "outcomes": {
+    "mfw-ss27-13639": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13645": {
+     "kind": "errors",
+     "n_diffs": 1,
+     "error_class": null
+    },
+    "mfw-ss27-13646": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13648": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13652": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    },
+    "mfw-ss27-13659": {
+     "kind": "invalid",
+     "n_diffs": 1,
+     "error_class": "provider_generation_failure"
+    },
+    "mfw-ss27-13669": {
+     "kind": "invalid",
+     "n_diffs": 1,
+     "error_class": "provider_generation_failure"
+    },
+    "mfw-ss27-13685": {
+     "kind": "invalid",
+     "n_diffs": 1,
+     "error_class": "provider_generation_failure"
+    },
+    "mfw-ss27-13691": {
+     "kind": "invalid",
+     "n_diffs": 1,
+     "error_class": "provider_generation_failure"
+    },
+    "mfw-ss27-13700": {
+     "kind": "exact",
+     "n_diffs": 0,
+     "error_class": null
+    }
+   }
+  }
+ },
+ "usage": {
+  "gemini-3.5-flash-lite": {
+   "answered": 30,
+   "input_tokens": 18145,
+   "output_tokens": 2848
+  },
+  "openai/gpt-oss-120b": {
+   "answered": 30,
+   "input_tokens": 22805,
+   "output_tokens": 5793
+  },
+  "qwen/qwen3.8-27b": {
+   "answered": 30,
+   "input_tokens": 14737,
+   "output_tokens": 2249
+  }
+ },
+ "by_model": {
+  "gemini-3.5-flash-lite": {
+   "cells": 3,
+   "mean_f1": 1.0,
+   "mean_precision": 1.0,
+   "mean_recall": 1.0,
+   "mean_invalid_output_rate": 0.0,
+   "mean_rdf_conforms_rate": 1.0,
+   "top_errors": {}
+  },
+  "openai/gpt-oss-120b": {
+   "cells": 3,
+   "mean_f1": 1.0,
+   "mean_precision": 1.0,
+   "mean_recall": 1.0,
+   "mean_invalid_output_rate": 0.0,
+   "mean_rdf_conforms_rate": 1.0,
+   "top_errors": {}
+  },
+  "qwen/qwen3.8-27b": {
+   "cells": 3,
+   "mean_f1": 0.8550219829089872,
+   "mean_precision": 0.991869918699187,
+   "mean_recall": 0.762962962962963,
+   "mean_invalid_output_rate": 0.23333333333333336,
+   "mean_rdf_conforms_rate": 0.7666666666666666,
+   "top_errors": {
+    "invalid_output": 7,
+    "wrong_value": 1,
+    "asterisk_not_preserved": 1,
+    "evidence_not_verbatim": 1
+   }
+  }
+ },
+ "by_technique": {
+  "few_shot": {
+   "cells": 3,
+   "mean_f1": 0.9767441860465116,
+   "mean_precision": 0.991869918699187,
+   "mean_recall": 0.9629629629629629,
+   "mean_invalid_output_rate": 0.03333333333333333,
+   "mean_rdf_conforms_rate": 0.9666666666666667,
+   "top_errors": {
+    "invalid_output": 1,
+    "wrong_value": 1
+   }
+  },
+  "step_by_step": {
+   "cells": 3,
+   "mean_f1": 0.9674796747967479,
+   "mean_precision": 1.0,
+   "mean_recall": 0.9407407407407407,
+   "mean_invalid_output_rate": 0.06666666666666667,
+   "mean_rdf_conforms_rate": 0.9333333333333332,
+   "top_errors": {
+    "invalid_output": 2
+   }
+  },
+  "zero_shot": {
+   "cells": 3,
+   "mean_f1": 0.9107981220657276,
+   "mean_precision": 1.0,
+   "mean_recall": 0.8592592592592592,
+   "mean_invalid_output_rate": 0.13333333333333333,
+   "mean_rdf_conforms_rate": 0.8666666666666667,
+   "top_errors": {
+    "invalid_output": 4,
+    "asterisk_not_preserved": 1,
+    "evidence_not_verbatim": 1
+   }
+  }
+ },
+ "note": "Descriptive only: unweighted means over cells, n small, no significance claims. No interpretation is generated.",
+ "validated_triples": {
+  "per_cell": {
+   "gemini-3.5-flash-lite | few_shot": 108,
+   "gemini-3.5-flash-lite | step_by_step": 108,
+   "gemini-3.5-flash-lite | zero_shot": 108,
+   "openai/gpt-oss-120b | few_shot": 108,
+   "openai/gpt-oss-120b | step_by_step": 108,
+   "openai/gpt-oss-120b | zero_shot": 108,
+   "qwen/qwen3.8-27b | few_shot": 87,
+   "qwen/qwen3.8-27b | step_by_step": 87,
+   "qwen/qwen3.8-27b | zero_shot": 54
+  },
+  "total": 876,
+  "is_mock": false
+ },
+ "is_mock": false
+}

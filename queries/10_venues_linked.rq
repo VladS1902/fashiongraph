@@ -1,0 +1,12 @@
+# Venues linked to MFW via P793 (inbound) or P7153 (outbound): class, coordinates, address presence.
+SELECT DISTINCT ?v ?vLabel ?classLabel ?coord ?street ?link WHERE {
+  { ?v wdt:P793 wd:Q130829 . BIND("P793 significant event (venue->MFW)" AS ?link) }
+  UNION { wd:Q130829 wdt:P7153 ?v . BIND("P7153 significant place (MFW->venue)" AS ?link) }
+  OPTIONAL { ?v wdt:P31 ?class }
+  OPTIONAL { ?v wdt:P625 ?coord }
+  OPTIONAL { ?v wdt:P6375 ?street }
+  FILTER(!REGEX(STR(?v), "Q0$"))
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+ORDER BY ?link ?vLabel
+LIMIT 60

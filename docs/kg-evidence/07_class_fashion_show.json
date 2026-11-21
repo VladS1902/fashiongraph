@@ -1,0 +1,38 @@
+{
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query_file": "queries/07_class_fashion_show.rq",
+ "query_sha256_12": "f556e181cf7e",
+ "query": "# Which Wikidata classes exist for fashion shows / weeks and how many instances (reuse check for modelling).\nSELECT DISTINCT ?class ?classLabel (COUNT(?i) AS ?n) WHERE {\n  VALUES ?class { wd:Q253946 wd:Q1171323 wd:Q1067375 }\n  ?i wdt:P31 ?class .\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n}\nGROUP BY ?class ?classLabel\nORDER BY DESC(?n)\nLIMIT 10\n",
+ "timestamp_utc": "2026-11-19T11:46:22.169269+00:00",
+ "http_status": 200,
+ "response": {
+  "head": {
+   "vars": [
+    "class",
+    "classLabel",
+    "n"
+   ]
+  },
+  "results": {
+   "bindings": [
+    {
+     "class": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q253946"
+     },
+     "classLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "fashion week"
+     },
+     "n": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+      "type": "literal",
+      "value": "28"
+     }
+    }
+   ]
+  }
+ },
+ "row_count": 1
+}

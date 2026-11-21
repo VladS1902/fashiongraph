@@ -1,0 +1,15 @@
+# Look for Milan fashion-show style events (editions/shows) by label REGEX on items located in Milan or labelled with Milan.
+SELECT DISTINCT ?item ?label ?desc ?start ?venue WHERE {
+  SERVICE wikibase:mwapi {
+    bd:serviceParam wikibase:api "EntitySearch" ; wikibase:endpoint "www.wikidata.org" ;
+      mwapi:search "fashion show Milan" ; mwapi:language "en" .
+    ?item wikibase:apiOutputItem mwapi:item .
+  }
+  ?item rdfs:label ?label .
+  FILTER(LANG(?label)="en" && REGEX(?label, "fashion (show|week)|collection|Spring|Autumn|Fall|Winter|Summer", "i"))
+  OPTIONAL { ?item schema:description ?desc FILTER(LANG(?desc)="en") }
+  OPTIONAL { ?item wdt:P580 ?start }
+  OPTIONAL { ?item wdt:P276 ?venue }
+}
+ORDER BY ?label
+LIMIT 50

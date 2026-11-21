@@ -1,0 +1,9 @@
+# Which entities point TO Q130829 (any direct property)? Tests whether editions/brands/venues are linked.
+SELECT DISTINCT ?s ?sLabel ?propLabel WHERE {
+  ?s ?p wd:Q130829 . FILTER(?s != wd:Q130829)
+  ?prop wikibase:directClaim ?p .
+  OPTIONAL { ?s rdfs:label ?sLabel FILTER(LANG(?sLabel)="en") }
+  OPTIONAL { ?prop rdfs:label ?propLabel FILTER(LANG(?propLabel)="en") }
+}
+ORDER BY ?propLabel ?sLabel
+LIMIT 100

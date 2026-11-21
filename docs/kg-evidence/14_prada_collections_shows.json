@@ -1,0 +1,22 @@
+{
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query_file": "queries/14_prada_collections_shows.rq",
+ "query_sha256_12": "84761fe306f0",
+ "query": "# Follow-up: are there collection/show items for Prada (e.g. Prada Spring/Summer ...)? Label-bounded, English + Italian.\nSELECT DISTINCT ?item ?itemLabel ?itemDescription ?class WHERE {\n  SERVICE wikibase:mwapi {\n    bd:serviceParam wikibase:api \"EntitySearch\" ; wikibase:endpoint \"www.wikidata.org\" ;\n      mwapi:search \"Prada collection\" ; mwapi:language \"en\" .\n    ?item wikibase:apiOutputItem mwapi:item .\n  }\n  OPTIONAL { ?item wdt:P31 ?class }\n  ?item rdfs:label ?itemLabel . FILTER(LANG(?itemLabel) IN (\"it\",\"en\") && REGEX(?itemLabel, \"Prada.*(collection|fashion show|Spring|Autumn|Fall|Winter|Summer)|collezione\", \"i\"))\n  OPTIONAL { ?item schema:description ?itemDescription FILTER(LANG(?itemDescription) IN (\"it\",\"en\")) }\n}\nORDER BY ?itemLabel\nLIMIT 20\n",
+ "timestamp_utc": "2026-11-19T11:55:43.847822+00:00",
+ "http_status": 200,
+ "response": {
+  "head": {
+   "vars": [
+    "item",
+    "itemLabel",
+    "itemDescription",
+    "class"
+   ]
+  },
+  "results": {
+   "bindings": []
+  }
+ },
+ "row_count": 0
+}

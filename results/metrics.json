@@ -1,0 +1,234 @@
+{
+ "banner": null,
+ "is_mock": false,
+ "meta": {
+  "dataset_sha256": "684dc5f900a1106eca7dfa6ede13f9d8309c4a09bd0936a3f5a6fe7adf1c208e",
+  "prompt_version": "v0.2-provisional",
+  "techniques_status": "PROVISIONAL (names unconfirmed against course materials)",
+  "gold_sha256": "0265b3dd5a457020a0ba5327e81c95743254ddcbe7671eb8f8291cefa0a7acd1",
+  "run_stats": {
+   "cached": 90,
+   "new": 0,
+   "failed": 0,
+   "halted": null,
+   "cost_usd": 0.0
+  },
+  "expected_rows": 90,
+  "answered_rows": 90,
+  "budget": {
+   "mode": "free",
+   "spent_eur": 0.0,
+   "cap_eur": 0.0,
+   "waited_s": 0.0,
+   "per_model": {
+    "gemini-3.5-flash-lite": {
+     "calls_24h": 0,
+     "tokens_24h": 0
+    },
+    "openai/gpt-oss-120b": {
+     "calls_24h": 0,
+     "tokens_24h": 0
+    },
+    "qwen/qwen3.8-27b": {
+     "calls_24h": 0,
+     "tokens_24h": 0
+    }
+   }
+  },
+  "complete": true
+ },
+ "cells": [
+  {
+   "model_id": "gemini-3.5-flash-lite",
+   "technique": "few_shot",
+   "n_records": 10,
+   "is_mock": false,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "tp": 45,
+   "fp": 0,
+   "fn": 0,
+   "abstain_ok": 4,
+   "invalid_output_rate": 0.0,
+   "unsupported_assertion_rate": 0.0,
+   "rdf_outcomes": {
+    "conforms": 10
+   },
+   "rdf_conforms_rate": 1.0,
+   "errors": {}
+  },
+  {
+   "model_id": "gemini-3.5-flash-lite",
+   "technique": "step_by_step",
+   "n_records": 10,
+   "is_mock": false,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "tp": 45,
+   "fp": 0,
+   "fn": 0,
+   "abstain_ok": 4,
+   "invalid_output_rate": 0.0,
+   "unsupported_assertion_rate": 0.0,
+   "rdf_outcomes": {
+    "conforms": 10
+   },
+   "rdf_conforms_rate": 1.0,
+   "errors": {}
+  },
+  {
+   "model_id": "gemini-3.5-flash-lite",
+   "technique": "zero_shot",
+   "n_records": 10,
+   "is_mock": false,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "tp": 45,
+   "fp": 0,
+   "fn": 0,
+   "abstain_ok": 4,
+   "invalid_output_rate": 0.0,
+   "unsupported_assertion_rate": 0.0,
+   "rdf_outcomes": {
+    "conforms": 10
+   },
+   "rdf_conforms_rate": 1.0,
+   "errors": {}
+  },
+  {
+   "model_id": "openai/gpt-oss-120b",
+   "technique": "few_shot",
+   "n_records": 10,
+   "is_mock": false,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "tp": 45,
+   "fp": 0,
+   "fn": 0,
+   "abstain_ok": 4,
+   "invalid_output_rate": 0.0,
+   "unsupported_assertion_rate": 0.0,
+   "rdf_outcomes": {
+    "conforms": 10
+   },
+   "rdf_conforms_rate": 1.0,
+   "errors": {}
+  },
+  {
+   "model_id": "openai/gpt-oss-120b",
+   "technique": "step_by_step",
+   "n_records": 10,
+   "is_mock": false,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "tp": 45,
+   "fp": 0,
+   "fn": 0,
+   "abstain_ok": 4,
+   "invalid_output_rate": 0.0,
+   "unsupported_assertion_rate": 0.0,
+   "rdf_outcomes": {
+    "conforms": 10
+   },
+   "rdf_conforms_rate": 1.0,
+   "errors": {}
+  },
+  {
+   "model_id": "openai/gpt-oss-120b",
+   "technique": "zero_shot",
+   "n_records": 10,
+   "is_mock": false,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "tp": 45,
+   "fp": 0,
+   "fn": 0,
+   "abstain_ok": 4,
+   "invalid_output_rate": 0.0,
+   "unsupported_assertion_rate": 0.0,
+   "rdf_outcomes": {
+    "conforms": 10
+   },
+   "rdf_conforms_rate": 1.0,
+   "errors": {}
+  },
+  {
+   "model_id": "qwen/qwen3.8-27b",
+   "technique": "few_shot",
+   "n_records": 10,
+   "is_mock": false,
+   "precision": 0.975609756097561,
+   "recall": 0.8888888888888888,
+   "f1": 0.9302325581395349,
+   "tp": 40,
+   "fp": 1,
+   "fn": 5,
+   "abstain_ok": 3,
+   "invalid_output_rate": 0.1,
+   "unsupported_assertion_rate": 0.024390243902439025,
+   "rdf_outcomes": {
+    "conforms": 9,
+    "no_prediction": 1
+   },
+   "rdf_conforms_rate": 0.9,
+   "errors": {
+    "invalid_output": 1,
+    "wrong_value": 1
+   }
+  },
+  {
+   "model_id": "qwen/qwen3.8-27b",
+   "technique": "step_by_step",
+   "n_records": 10,
+   "is_mock": false,
+   "precision": 1.0,
+   "recall": 0.8222222222222222,
+   "f1": 0.9024390243902439,
+   "tp": 37,
+   "fp": 0,
+   "fn": 8,
+   "abstain_ok": 3,
+   "invalid_output_rate": 0.2,
+   "unsupported_assertion_rate": 0.0,
+   "rdf_outcomes": {
+    "no_prediction": 2,
+    "conforms": 8
+   },
+   "rdf_conforms_rate": 0.8,
+   "errors": {
+    "invalid_output": 2
+   }
+  },
+  {
+   "model_id": "qwen/qwen3.8-27b",
+   "technique": "zero_shot",
+   "n_records": 10,
+   "is_mock": false,
+   "precision": 1.0,
+   "recall": 0.5777777777777777,
+   "f1": 0.732394366197183,
+   "tp": 26,
+   "fp": 0,
+   "fn": 19,
+   "abstain_ok": 3,
+   "invalid_output_rate": 0.4,
+   "unsupported_assertion_rate": 0.0,
+   "rdf_outcomes": {
+    "conforms": 6,
+    "no_prediction": 4
+   },
+   "rdf_conforms_rate": 0.6,
+   "errors": {
+    "asterisk_not_preserved": 1,
+    "evidence_not_verbatim": 1,
+    "invalid_output": 4
+   }
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query_file": "queries/04_edition_search_mwapi.rq",
+ "query_sha256_12": "9b017da72ba0",
+ "query": "# Entity search via MediaWiki API service: any item whose label/alias matches \"Milan Fashion Week\" (editions, seasons).\nSELECT DISTINCT ?item ?label ?desc WHERE {\n  SERVICE wikibase:mwapi {\n    bd:serviceParam wikibase:api \"EntitySearch\" ; wikibase:endpoint \"www.wikidata.org\" ;\n      mwapi:search \"Milan Fashion Week\" ; mwapi:language \"en\" .\n    ?item wikibase:apiOutputItem mwapi:item .\n  }\n  ?item rdfs:label ?label . FILTER(LANG(?label)=\"en\")\n  FILTER(REGEX(?label, \"fashion week|moda\", \"i\"))\n  OPTIONAL { ?item schema:description ?desc FILTER(LANG(?desc)=\"en\") }\n}\nORDER BY ?label\nLIMIT 30\n",
+ "timestamp_utc": "2026-11-19T11:45:53.326651+00:00",
+ "http_status": 200,
+ "response": {
+  "head": {
+   "vars": [
+    "item",
+    "label",
+    "desc"
+   ]
+  },
+  "results": {
+   "bindings": [
+    {
+     "item": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q130829"
+     },
+     "label": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Milan Fashion Week"
+     },
+     "desc": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Italian clothing trade show"
+     }
+    }
+   ]
+  }
+ },
+ "row_count": 1
+}

@@ -1,0 +1,13 @@
+# Entity search via MediaWiki API service: any item whose label/alias matches "Milan Fashion Week" (editions, seasons).
+SELECT DISTINCT ?item ?label ?desc WHERE {
+  SERVICE wikibase:mwapi {
+    bd:serviceParam wikibase:api "EntitySearch" ; wikibase:endpoint "www.wikidata.org" ;
+      mwapi:search "Milan Fashion Week" ; mwapi:language "en" .
+    ?item wikibase:apiOutputItem mwapi:item .
+  }
+  ?item rdfs:label ?label . FILTER(LANG(?label)="en")
+  FILTER(REGEX(?label, "fashion week|moda", "i"))
+  OPTIONAL { ?item schema:description ?desc FILTER(LANG(?desc)="en") }
+}
+ORDER BY ?label
+LIMIT 30

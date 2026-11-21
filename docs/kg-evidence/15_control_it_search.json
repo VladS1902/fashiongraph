@@ -1,0 +1,32 @@
+{
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query_file": "queries/15_control_it_search.rq",
+ "query_sha256_12": "8d2d6752d8b7",
+ "query": "# CONTROL: Italian entity search must find a known item (Milano), proving the it-language MWAPI path works (guards against false negatives in 12-14).\nSELECT DISTINCT ?item ?itemLabel WHERE {\n  SERVICE wikibase:mwapi {\n    bd:serviceParam wikibase:api \"EntitySearch\" ; wikibase:endpoint \"www.wikidata.org\" ;\n      mwapi:search \"Settimana della moda di Milano\" ; mwapi:language \"it\" .\n    ?item wikibase:apiOutputItem mwapi:item .\n  }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"it,en\". }\n}\nLIMIT 10\n",
+ "timestamp_utc": "2026-11-19T11:55:46.102427+00:00",
+ "http_status": 200,
+ "response": {
+  "head": {
+   "vars": [
+    "item",
+    "itemLabel"
+   ]
+  },
+  "results": {
+   "bindings": [
+    {
+     "item": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q130829"
+     },
+     "itemLabel": {
+      "xml:lang": "it",
+      "type": "literal",
+      "value": "settimana della moda di Milano"
+     }
+    }
+   ]
+  }
+ },
+ "row_count": 1
+}

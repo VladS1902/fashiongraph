@@ -1,0 +1,45 @@
+{
+ "endpoint": "https://query.wikidata.org/sparql",
+ "query_file": "queries/08_milan_houses_coverage.rq",
+ "query_sha256_12": "bbcb91345dfe",
+ "query": "# Coverage of Milan-headquartered fashion houses (class resolved from Prada's own P31 labelled \"fashion house\").\n# Counts houses overall, with a participant-in (P1344) statement, with website, with inception.\nSELECT (COUNT(DISTINCT ?b) AS ?houses) (COUNT(DISTINCT ?bPart) AS ?withParticipantIn)\n       (COUNT(DISTINCT ?bWeb) AS ?withWebsite) (COUNT(DISTINCT ?bInc) AS ?withInception) WHERE {\n  wd:Q193136 wdt:P31 ?cls . ?cls rdfs:label \"fashion house\"@en .\n  ?b wdt:P31 ?cls ; wdt:P159 wd:Q490 .\n  OPTIONAL { ?b wdt:P1344 ?e . BIND(?b AS ?bPart) }\n  OPTIONAL { ?b wdt:P856 ?w . BIND(?b AS ?bWeb) }\n  OPTIONAL { ?b wdt:P571 ?i . BIND(?b AS ?bInc) }\n}\nLIMIT 1\n",
+ "timestamp_utc": "2026-11-19T11:46:34.302136+00:00",
+ "http_status": 200,
+ "response": {
+  "head": {
+   "vars": [
+    "houses",
+    "withParticipantIn",
+    "withWebsite",
+    "withInception"
+   ]
+  },
+  "results": {
+   "bindings": [
+    {
+     "houses": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+      "type": "literal",
+      "value": "19"
+     },
+     "withParticipantIn": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+      "type": "literal",
+      "value": "0"
+     },
+     "withWebsite": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+      "type": "literal",
+      "value": "16"
+     },
+     "withInception": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+      "type": "literal",
+      "value": "16"
+     }
+    }
+   ]
+  }
+ },
+ "row_count": 1
+}

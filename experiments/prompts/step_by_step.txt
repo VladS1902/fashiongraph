@@ -1,0 +1,4 @@
+Extract the fashion events from this text. Think step by step: (1) list candidate events, (2) for each, find the supporting sentence, (3) fill each field or null. Then output ONLY the final JSON (no reasoning text).
+
+TEXT:
+{text}

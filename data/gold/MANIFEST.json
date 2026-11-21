@@ -1,0 +1,31 @@
+{
+ "dataset": "fashiongraph-pilot-gold",
+ "version": "0.2.2",
+ "records": 10,
+ "sha256": "0265b3dd5a457020a0ba5327e81c95743254ddcbe7671eb8f8291cefa0a7acd1",
+ "frozen_on": "2026-11-19",
+ "source_id": "cnmi-calendar-ss27",
+ "source_html_sha256": "5713ab769f35bda089de3878da596a065ac13fd836c13a46ed529cede899180b",
+ "annotation_policy": "annotation-policy-v1 (provisionally approved 2026-11-19; see docs/annotation-guidelines.md)",
+ "review_status": "HUMAN VERIFIED by project owner (all 10 records, 2026-11-19); machine second-pass passed; single official source, no independent corroboration",
+ "split_policy": "splits unassigned; test/train defined in data/experiment/MANIFEST.json",
+ "change_rule": "any content change requires a new version + new checksum; previous versions are kept in data/gold/archive/",
+ "history": [
+  {
+   "version": "0.1.0",
+   "sha256": "edf61b8f19bee26332838c9d8b7e7b905436e801c26eed902721367488949200",
+   "file": "archive/gold_pilot.v0.1.0.jsonl"
+  },
+  {
+   "version": "0.2.0",
+   "sha256": "72712fdb5020b88c077f81742673af49038691619bf483eb65ddd41a1be5980b",
+   "file": "archive/gold_pilot.v0.2.0.jsonl"
+  },
+  {
+   "version": "0.2.1",
+   "sha256": "0265b3dd5a457020a0ba5327e81c95743254ddcbe7671eb8f8291cefa0a7acd1",
+   "file": "archive/gold_pilot.v0.2.1.jsonl"
+  }
+ ],
+ "changes_vs_previous": "v0.2.1 -> v0.2.2: wording-only correction of the provenance text (human_verified_by). No scored, descriptive or status value changed."
+}

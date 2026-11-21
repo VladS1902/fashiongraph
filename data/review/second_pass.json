@@ -1,0 +1,206 @@
+{
+ "live_sha256": "6a2a668eb74a07b2fb9eb6ba5e04c7190785f816f5fab41b80e9cff34b9a2ad4",
+ "saved_sha256": "3fa8347b1aca07be2464b0c1d307c9e75ac0fd2159bc1e4b1dba7fe5a41ca9ce",
+ "records": [
+  {
+   "gold_id": "mfw-ss27-13639",
+   "checks": {
+    "dom_found": true,
+    "dom_title_eq": true,
+    "dom_day_eq": true,
+    "dom_time_eq": true,
+    "dom_address_eq": true,
+    "dom_type_F": true,
+    "coords_consistent_with_status": true,
+    "js_type_F": true,
+    "js_name_eq_title_sans_star": true,
+    "linear_text_has_row": true,
+    "live_same_as_saved": true
+   },
+   "info": {
+    "coords_on_nonaddress_row": false
+   },
+   "all_ok": true
+  },
+  {
+   "gold_id": "mfw-ss27-13700",
+   "checks": {
+    "dom_found": true,
+    "dom_title_eq": true,
+    "dom_day_eq": true,
+    "dom_time_eq": true,
+    "dom_address_eq": true,
+    "dom_type_F": true,
+    "coords_consistent_with_status": true,
+    "js_type_F": true,
+    "js_name_eq_title_sans_star": true,
+    "linear_text_has_row": true,
+    "live_same_as_saved": true
+   },
+   "info": {
+    "coords_on_nonaddress_row": false
+   },
+   "all_ok": true
+  },
+  {
+   "gold_id": "mfw-ss27-13645",
+   "checks": {
+    "dom_found": true,
+    "dom_title_eq": true,
+    "dom_day_eq": true,
+    "dom_time_eq": true,
+    "dom_address_eq": true,
+    "dom_type_F": true,
+    "coords_consistent_with_status": true,
+    "js_type_F": true,
+    "js_name_eq_title_sans_star": true,
+    "linear_text_has_row": true,
+    "live_same_as_saved": true
+   },
+   "info": {
+    "coords_on_nonaddress_row": true
+   },
+   "all_ok": true
+  },
+  {
+   "gold_id": "mfw-ss27-13646",
+   "checks": {
+    "dom_found": true,
+    "dom_title_eq": true,
+    "dom_day_eq": true,
+    "dom_time_eq": true,
+    "dom_address_eq": true,
+    "dom_type_F": true,
+    "coords_consistent_with_status": true,
+    "js_type_F": true,
+    "js_name_eq_title_sans_star": true,
+    "linear_text_has_row": true,
+    "live_same_as_saved": true
+   },
+   "info": {
+    "coords_on_nonaddress_row": false
+   },
+   "all_ok": true
+  },
+  {
+   "gold_id": "mfw-ss27-13685",
+   "checks": {
+    "dom_found": true,
+    "dom_title_eq": true,
+    "dom_day_eq": true,
+    "dom_time_eq": true,
+    "dom_address_eq": true,
+    "dom_type_F": true,
+    "coords_consistent_with_status": true,
+    "js_type_F": true,
+    "js_name_eq_title_sans_star": true,
+    "linear_text_has_row": true,
+    "live_same_as_saved": true
+   },
+   "info": {
+    "coords_on_nonaddress_row": true
+   },
+   "all_ok": true
+  },
+  {
+   "gold_id": "mfw-ss27-13691",
+   "checks": {
+    "dom_found": true,
+    "dom_title_eq": true,
+    "dom_day_eq": true,
+    "dom_time_eq": true,
+    "dom_address_eq": true,
+    "dom_type_F": true,
+    "coords_consistent_with_status": true,
+    "js_type_F": true,
+    "js_name_eq_title_sans_star": true,
+    "linear_text_has_row": true,
+    "live_same_as_saved": true
+   },
+   "info": {
+    "coords_on_nonaddress_row": false
+   },
+   "all_ok": true
+  },
+  {
+   "gold_id": "mfw-ss27-13669",
+   "checks": {
+    "dom_found": true,
+    "dom_title_eq": true,
+    "dom_day_eq": true,
+    "dom_time_eq": true,
+    "dom_address_eq": true,
+    "dom_type_F": true,
+    "coords_consistent_with_status": true,
+    "js_type_F": true,
+    "js_name_eq_title_sans_star": true,
+    "linear_text_has_row": true,
+    "live_same_as_saved": true
+   },
+   "info": {
+    "coords_on_nonaddress_row": false
+   },
+   "all_ok": true
+  },
+  {
+   "gold_id": "mfw-ss27-13659",
+   "checks": {
+    "dom_found": true,
+    "dom_title_eq": true,
+    "dom_day_eq": true,
+    "dom_time_eq": true,
+    "dom_address_eq": true,
+    "dom_type_F": true,
+    "coords_consistent_with_status": true,
+    "js_type_F": true,
+    "js_name_eq_title_sans_star": true,
+    "linear_text_has_row": true,
+    "live_same_as_saved": true
+   },
+   "info": {
+    "coords_on_nonaddress_row": false
+   },
+   "all_ok": true
+  },
+  {
+   "gold_id": "mfw-ss27-13652",
+   "checks": {
+    "dom_found": true,
+    "dom_title_eq": true,
+    "dom_day_eq": true,
+    "dom_time_eq": true,
+    "dom_address_eq": true,
+    "dom_type_F": true,
+    "coords_consistent_with_status": true,
+    "js_type_F": true,
+    "js_name_eq_title_sans_star": true,
+    "linear_text_has_row": true,
+    "live_same_as_saved": true
+   },
+   "info": {
+    "coords_on_nonaddress_row": false
+   },
+   "all_ok": true
+  },
+  {
+   "gold_id": "mfw-ss27-13648",
+   "checks": {
+    "dom_found": true,
+    "dom_title_eq": true,
+    "dom_day_eq": true,
+    "dom_time_eq": true,
+    "dom_address_eq": true,
+    "dom_type_F": true,
+    "coords_consistent_with_status": true,
+    "js_type_F": true,
+    "js_name_eq_title_sans_star": true,
+    "linear_text_has_row": true,
+    "live_same_as_saved": true
+   },
+   "info": {
+    "coords_on_nonaddress_row": false
+   },
+   "all_ok": true
+  }
+ ]
+}
